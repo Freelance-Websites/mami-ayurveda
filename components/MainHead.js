@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default function MainHead() {
   return (
@@ -10,7 +11,7 @@ export default function MainHead() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
 
       {/* Scripts */}
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </Head>
   );
 }
