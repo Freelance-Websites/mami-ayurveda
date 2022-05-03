@@ -4,6 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: [
+        "Poppins",
+        "ui-sans-serif",
+        "system-ui",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+      ],
+    },
     extend: {},
   },
   plugins: [],
