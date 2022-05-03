@@ -7,13 +7,13 @@ export default function Header() {
       className="sticky top-0 bg-white border-b border-b-gray-50 p-3"
     >
       <section
-        className="container mx-auto flex items-center justify-between"
+        className="container mx-auto flex items-center"
       >
         <Link
           href="/"
         >
           <a
-            className="hover:opacity-80"
+            className="hover:opacity-80 flex-1"
           >
             <Image
               src="/images/logos/logo.png"
@@ -25,10 +25,28 @@ export default function Header() {
             />
           </a>
         </Link>
-        <ul
-          className="flex items-center gap-4"
+        <div
+          className="flex-1 justify-center relative hidden md:flex"
         >
-          <li>
+          <div
+            className="absolute top-0"
+          >
+            <Image
+              src="/images/logos/isologo.png"
+              srcSet="/images/logos/isologo.png 1x, /logos/isologo@2x.png 2x"
+              alt="Mami Ayurveda Pediatría"
+              layout="fixed"
+              width={62}
+              height={137}
+              className="z-10"
+            />
+            <div className="absolute w-16 h-16 bg-white top-6 rounded-full" />
+          </div>
+        </div>
+        <ul
+          className="flex items-center gap-4 flex-1 justify-end"
+        >
+          <li className="hidden md:block">
             <Link
               href="/ebooks"
             >
@@ -39,7 +57,7 @@ export default function Header() {
               </a>
             </Link>
           </li>
-          <li>
+          <li className="hidden md:block">
             <Link
               href="/cursos-y-talleres"
             >
