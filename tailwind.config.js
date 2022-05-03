@@ -13,6 +13,11 @@ module.exports = {
         "Arial",
         "sans-serif",
       ],
+      serif: [
+        "Crimson Pro",
+        "Times New Roman",
+        "serif",
+      ]
     },
     extend: {},
   },
