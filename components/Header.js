@@ -1,14 +1,27 @@
+// Globals
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Components
+import Button from './Button';
+
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const cta = {
+    link: '/turnos',
+    text: 'Turnos',
+    isExternal: false,
+    isButton: false,
+    theme: 'solid',
+  };
+
   return (
     <>
       {/* header */}
       <header
-        className="sticky top-0 bg-white border-b border-b-gray-50 p-3"
+        className="sticky top-0 bg-white border-b border-b-gray-50 p-3 z-10"
       >
         <section
           className="container mx-auto flex items-center"
@@ -74,15 +87,9 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link
-                href="/turnos"
-              >
-                <a
-                  className="uppercase bg-orange-400 p-2 rounded text-white text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:bg-orange-500"
-                >
-                  Turnos
-                </a>
-              </Link>
+              <Button
+                cta={cta}
+              />
             </li>
             <li className="flex">
               <button
