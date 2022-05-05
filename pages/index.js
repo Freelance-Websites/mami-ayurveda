@@ -11,7 +11,8 @@ export default function Home() {
     heroDescription,
     heroCtaText,
     heroCtaLink,
-    heroImage
+    heroDesktopImage,
+    heroMobileImage
   } = attributes;
 
   const cta = {
@@ -29,7 +30,9 @@ export default function Home() {
         title={heroTitle}
         text={heroDescription}
         cta={cta}
-        image={heroImage}
+        desktopImage={heroDesktopImage}
+        mobileImage={heroMobileImage}
+        showForm={true}
       />
     </Base>
   )
