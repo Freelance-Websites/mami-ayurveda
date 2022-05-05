@@ -3,3 +3,59 @@ backend:
   branch: main
 media_folder: public/images/uploads
 public_folder: images/uploads/
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      # Homepage Structure
+      - label: "Home"
+        name: "home"
+        file: "content/home.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Imagen escritorio encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de escritorio",
+            }
+          - {
+              label: "Imagen mobile encabezado",
+              name: "heroMobileImage",
+              widget: "image",
+              required: false,
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de dispositivos móviles",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
+            }
+          - {
+              label: "Texto encabezado",
+              name: "heroDescription",
+              widget: "text",
+              required: false,
+              hint: "Podés usar HTML en este campo",
+            }
+          - {
+              label: "Texto del CTA encabezado",
+              name: "heroCtaText",
+              widget: "string",
+              required: false,
+              hint: "El texto para el botón del encabezado",
+            }
+          - {
+              label: "Link del CTA encabezado",
+              name: "heroCtaLink",
+              widget: "string",
+              required: false,
+              hint: "El link para el botón del encabezado",
+            }

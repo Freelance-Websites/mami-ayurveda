@@ -63,10 +63,12 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
           >
             {title}
           </h1>
-          <p
-            className="my-2 text-white"
-            dangerouslySetInnerHTML={{ __html: text}}
-          />
+          {text &&
+            <p
+              className="my-2 text-white"
+              dangerouslySetInnerHTML={{ __html: text}}
+            />
+          }
           {cta &&
             <Button
               cta={cta}
