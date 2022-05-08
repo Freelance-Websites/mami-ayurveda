@@ -43,7 +43,7 @@ export default function Header() {
             </a>
           </Link>
           <div
-            className="flex-1 justify-center relative hidden md:flex"
+            className="flex-1 justify-center relative hidden lg:flex"
           >
             <div
               className="absolute top-0"

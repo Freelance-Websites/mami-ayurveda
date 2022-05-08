@@ -25,11 +25,11 @@ highlights:
   - image: /images/uploads/homepage/highlight-1.jpg
     title: E-books
     text: Estos ebooks fueron creados para entregar a mis pacientes, para que puedan repasar todo lo aprendido en la consulta. Podés acceder a ellos por un precio muy accesible y me ayudás a seguir generando contenido en las redes.
-    link: /ebooks
+    linkUrl: /ebooks
   - image: /images/uploads/homepage/highlight-2.jpg
     title: 'Curso: Formación Ayurveda cuerpo-mente'
     text: Una formación que brindo junto a la Dra. Mercedes Bertuzzi (médica psiquiatra UBA), donde integramos saberes ancestrales del Ayurveda con conceptos modernos, para que puedas aplicarlo de una forma sencilla en tu vida cotidiana o con tus pacientes si sos personal de salud.
-    link: /cursos-y-talleres#formacion-ayurveda-cuerpo-mente
+    linkUrl: /cursos-y-talleres#formacion-ayurveda-cuerpo-mente
 contactTitle: ¿Sentís que la medicina convencional no te alcanza?
 contactFormTitle: Estemos en contacto!
 contactCTAs:

@@ -2,12 +2,16 @@
 import MainHead from "./MainHead";
 import Header from "./Header";
 
-export default function Base({ title, children }) {
+export default function Base({ title, classes, children }) {
   return (
     <>
       <MainHead title={title} />
       <Header />
-      <main>{children}</main>
+      <main
+        className={classes ? classes : undefined}
+      >
+        {children}
+      </main>
     </>
   );
 }

@@ -1,0 +1,7 @@
+.Title span {
+  @apply text-lime-900;
+}
+
+.Text strong {
+  @apply font-semibold block mt-2;
+}

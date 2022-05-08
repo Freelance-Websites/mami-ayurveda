@@ -17,4 +17,23 @@ doshas:
   - image: /images/uploads/icons/dosha-kapha.svg
     title: Kapha
     text: Tierra + Agua
+testDoshas:
+  - image: /images/uploads/que-es-ayurveda/test-doshas.jpg
+    title: Conocé tus <span>doshas</span>
+    text: Cada uno de nosotros tenemos una combinación única e irrepetible de estas tres energías que determinan tu constitución física, fisiológica y emocional, esta constitución se conoce como <em>prakriti</em>.<br />Conocer nuestra <em>prakriti</em> es una herramienta que nos permite escucharnos, estar atentos a nuestros puntos débiles para poder equilibrarlos y a nuestras fortalezas para potenciarlas.<br />Ayurveda hace foco en la prevención, para generar hábitos saludables. <strong>La clave es escucharse, detectar y actuar.</strong>
+highlightsTitle: ¿Sentís que la medicina <br />convencional <span>no te alcanza</span>?
+highlights:
+  - image: /images/uploads/que-es-ayurveda/highlight-1.jpg
+    linkUrl: https://www.google.com.ar
+    linkText: Conocé tus doshas
+  - image: /images/uploads/que-es-ayurveda/highlight-2.jpg
+    linkUrl: /sobre-mi#mi-enfoque
+    linkText: Conocé más sobre mí práctica médica
+contactTitle: ¡Estemos en contacto!
+contactFormTitle: Dejame tu consulta
+contactCTAs:
+  - text: Sacá un turno
+    link: /turnos
+  - text: Seguime en Instagram
+    link: https://www.instagram.com/mami.ayurveda
 ---

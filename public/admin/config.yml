@@ -63,7 +63,7 @@ collections:
               label: "Título secciones",
               name: "sectionsTitle",
               widget: "string",
-              hint: "El título de las secciones de la web",
+              hint: "El título de las secciones de la página",
             }
           - label: "Secciones"
             name: "sections"
@@ -77,7 +77,7 @@ collections:
               label: "Título destacados",
               name: "highlightsTitle",
               widget: "string",
-              hint: "El título de las secciones destacadas de la web",
+              hint: "El título de las secciones destacadas de la página",
             }
           - label: "Destacados"
             name: "highlights"
@@ -86,9 +86,10 @@ collections:
             hint: "Podés cargar cuantas quieras, pero sólo se muestran 2 de manera aleatoria."
             fields:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el destacado" }
-              - { label: "Título", name: "title", widget: "string", hint: "El título del destacado" }
-              - { label: "Texto", name: "text", widget: "string", hint: "El texto del destacado" }
-              - { label: "Link", name: "link", widget: "string", hint: "El link del destacado" }
+              - { label: "Título", name: "title", widget: "string", hint: "Opcional. El título del destacado", required: false }
+              - { label: "Texto", name: "text", widget: "string", hint: "Opcional. El text del destacado", required: false }
+              - { label: "URL del link", name: "linkUrl", widget: "string", hint: "La URL para el link del destacado" }
+              - { label: "Texto del link", name: "linkText", required: false, widget: "string", hint: "Opcional. El texto del link del destacado" }
           - {
               label: "Título contacto",
               name: "contactTitle",
@@ -184,3 +185,54 @@ collections:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el dosha" }
               - { label: "Título", name: "title", widget: "string", hint: "El título para el dosha" }
               - { label: "Texto", name: "text", widget: "string", hint: "El link para el dosha" }
+          - {
+              label: "Título destacados",
+              name: "highlightsTitle",
+              widget: "string",
+              hint: "El título de las secciones destacadas de la página",
+            }
+          - label: "Información test de Doshas"
+            name: "testDoshas"
+            widget: "list"
+            allow_add: true
+            max: 2
+            hint: "Para que el layout de la web quede bien, deben ser máximo 2"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta" }
+              - { label: "Texto", name: "text", widget: "string", hint: "El texto de la tarjeta"}
+          - label: "Destacados"
+            name: "highlights"
+            widget: "list"
+            allow_add: true
+            min: 2
+            max: 2
+            hint: "Para que el layout de la web quede bien, siempre deben ser 2"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el destacado" }
+              - { label: "Título", name: "title", widget: "string", hint: "Opcional. El título del destacado", required: false }
+              - { label: "Texto", name: "text", widget: "string", hint: "Opcional. El text del destacado", required: false }
+              - { label: "URL del link", name: "linkUrl", widget: "string", hint: "La URL para el link del destacado" }
+              - { label: "Texto del link", name: "linkText", required: false, widget: "string", hint: "Opcional. El texto del link del destacado" }
+          - {
+              label: "Título contacto",
+              name: "contactTitle",
+              widget: "string",
+              hint: "El título de la sección de contacto",
+            }
+          - {
+              label: "Título formulario de contacto",
+              name: "contactFormTitle",
+              widget: "string",
+              hint: "El título del formulario de contacto",
+              required: false
+            }
+          - label: "Botones contacto"
+            name: "contactCTAs"
+            widget: "list"
+            allow_add: true
+            max: 2
+            hint: "Máximo 2"
+            fields:
+              - { label: "Texto del botón", name: "text", widget: "string" }
+              - { label: "Link del botón", name: "link", widget: "string" }

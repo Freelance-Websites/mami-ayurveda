@@ -8,10 +8,11 @@ export default function Doshas({ title, text, doshas }) {
   return (
     <section
       className="
-        container mx-auto
-        py-16 sm:py-24 md:py-32 lg:py-48 px-4
+        container mx-auto relative z-10
+        pt-16 sm:pt-24 md:pt-32 lg:pt-48 px-4
         text-center
       "
+      id="que-son-los-doshas"
     >
       <h3
         dangerouslySetInnerHTML={{ __html: title }}

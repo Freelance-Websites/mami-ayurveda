@@ -2,7 +2,7 @@
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Doshas from '../components/que-es-ayurveda/Doshas';
-import Cards from '../components/Cards';
+import CardsContainer from '../components/Cards/Container';
 import Contact from '../components/Contact';
 
 // Content
@@ -19,7 +19,13 @@ export default function Ayurveda() {
     heroCtaLink,
     doshasTitle,
     doshasText,
-    doshas
+    doshas,
+    testDoshas,
+    highlightsTitle,
+    highlights,
+    contactTitle,
+    contactFormTitle,
+    contactCTAs
   } = attributes;
 
   const cta = {
@@ -47,19 +53,33 @@ export default function Ayurveda() {
         text={doshasText}
         doshas={doshas}
       />
-      {/* <Sections
-        title={sectionsTitle}
-        sections={sections}
-      />
-      <Cards
-        title={highlightsTitle}
-        content={highlights}
-      />
+      <section
+        className="
+          bg-lime-50
+          relative md:-top-32
+          mt-12 sm:mt-0 sm:pt-24 md:pt-32 lg:pt-48
+        "
+      >
+        <CardsContainer
+          content={testDoshas}
+          type="side-by-side"
+          classes="
+            pt-4 sm:pt-16 md:pt-24 lg:pt-32
+            pb-0 lg:pb-16
+          "
+        />
+        <CardsContainer
+          title={highlightsTitle}
+          content={highlights}
+          type="standard"
+          classes="top-16 md:top-32"
+        />
+      </section>
       <Contact
         title={contactTitle}
         subtitle={contactFormTitle}
         ctas={contactCTAs}
-      /> */}
+      />
     </Base>
   )
 }

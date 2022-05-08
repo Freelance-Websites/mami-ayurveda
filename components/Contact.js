@@ -57,12 +57,12 @@ export default function Contact({ title, subtitle, ctas }) {
             {title}
           </h6>
           <ul
-            className="flex items-baseline justify-center py-6"
+            className="flex items-center md:items-baseline justify-center flex-col md:flex-row py-6"
           >
             {ctas.map((cta, index) =>
               <li
                 key={index}
-                className={ctas.length > 1 ? 'ml-4' : undefined}
+                className={index > 0 ? 'mt-4 md:ml-4' : undefined}
               >
                 <Button
                   cta={{

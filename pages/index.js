@@ -2,7 +2,7 @@
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Sections from '../components/home/Sections';
-import Cards from '../components/Cards';
+import CardsContainer from '../components/Cards/Container';
 import Contact from '../components/Contact';
 
 // Content
@@ -49,8 +49,9 @@ export default function Home() {
         title={sectionsTitle}
         sections={sections}
       />
-      <Cards
+      <CardsContainer
         title={highlightsTitle}
+        type="standard"
         content={highlights}
       />
       <Contact
