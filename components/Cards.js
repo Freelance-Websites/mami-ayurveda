@@ -8,7 +8,7 @@ export default function Cards({ title, content }) {
   return (
     <section
       className="
-        container mx-auto
+        container mx-auto relative z-10
       "
     >
       {title &&

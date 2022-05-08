@@ -116,7 +116,7 @@ export function Form() {
           label="Nombre y apellido"
           placeholder="Nombre completo del paciente"
           required={true}
-          classes="md:col-span-full"
+          classes="text-gray-400 md:col-span-full"
         />
         <Select
           id="user-type"
@@ -174,7 +174,7 @@ export function Form() {
           label="Número de celular"
           placeholder="Número completo con código de área"
           required={true}
-          classes="md:col-span-full"
+          classes="text-gray-400 md:col-span-full"
           prepend="+54 9"
         />
         <Input
@@ -183,7 +183,7 @@ export function Form() {
           label="Email"
           placeholder="ejemplo@gmail.com"
           required={true}
-          classes="md:col-span-full"
+          classes="text-gray-400 md:col-span-full"
         />
         <Button
           cta={formCTA}

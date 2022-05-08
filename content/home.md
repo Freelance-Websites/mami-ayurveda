@@ -30,4 +30,9 @@ highlights:
     title: 'Curso: Formación Ayurveda cuerpo-mente'
     text: Una formación que brindo junto a la Dra. Mercedes Bertuzzi (médica psiquiatra UBA), donde integramos saberes ancestrales del Ayurveda con conceptos modernos, para que puedas aplicarlo de una forma sencilla en tu vida cotidiana o con tus pacientes si sos personal de salud.
     link: /cursos-y-talleres#formacion-ayurveda-cuerpo-mente
+contactTitle: ¿Sentís que la medicina convencional no te alcanza?
+contactFormTitle: Estemos en contacto!
+contactCTAs:
+  - text: Sacá un turno
+    link: /turnos
 ---

@@ -3,6 +3,7 @@ import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Sections from '../components/home/Sections';
 import Cards from '../components/Cards';
+import Contact from '../components/Contact';
 
 // Content
 import { attributes } from "../content/home.md";
@@ -18,7 +19,10 @@ export default function Home() {
     sectionsTitle,
     sections,
     highlightsTitle,
-    highlights
+    highlights,
+    contactTitle,
+    contactFormTitle,
+    contactCTAs
   } = attributes;
 
   const cta = {
@@ -47,6 +51,11 @@ export default function Home() {
       <Cards
         title={highlightsTitle}
         content={highlights}
+      />
+      <Contact
+        title={contactTitle}
+        subtitle={contactFormTitle}
+        ctas={contactCTAs}
       />
     </Base>
   )

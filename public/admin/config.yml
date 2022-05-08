@@ -89,3 +89,25 @@ collections:
               - { label: "Título", name: "title", widget: "string", hint: "El título del destacado" }
               - { label: "Texto", name: "text", widget: "string", hint: "El texto del destacado" }
               - { label: "Link", name: "link", widget: "string", hint: "El link del destacado" }
+          - {
+              label: "Título contacto",
+              name: "contactTitle",
+              widget: "string",
+              hint: "El título de la sección de contacto",
+            }
+          - {
+              label: "Título formulario de contacto",
+              name: "contactFormTitle",
+              widget: "string",
+              hint: "El título del formulario de contacto",
+              required: false
+            }
+          - label: "Botones contacto"
+            name: "contactCTAs"
+            widget: "list"
+            allow_add: true
+            max: 2
+            hint: "Máximo 2"
+            fields:
+              - { label: "Texto del botón", name: "text", widget: "string" }
+              - { label: "Link del botón", name: "link", widget: "string" }

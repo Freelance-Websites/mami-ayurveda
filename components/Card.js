@@ -8,6 +8,7 @@ export default function Card({ card }) {
       className="
         rounded-xl
         border border-gray-100
+        bg-white
       "
     >
       <Link href={card.link}>

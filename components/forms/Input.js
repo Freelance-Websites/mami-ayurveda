@@ -4,7 +4,7 @@ export default function Input({ id, type, label, required, placeholder, classes,
       className={classes && classes}
     >
       <label
-        className="uppercase text-xs font-semibold tracking-widest text-gray-400 mb-2 block"
+        className="uppercase text-xs font-semibold tracking-widest text-inherit	 mb-2 block"
       >
         {label}
       </label>

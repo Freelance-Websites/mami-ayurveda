@@ -3,7 +3,14 @@ import Link from 'next/link';
 
 export default function Button({ cta }) {
   const generalClasses = 'inline-flex items-center p-2 inline-block rounded text-white uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200';
-  const themeClasses = cta.theme === 'solid' ? 'bg-orange-400 hover:bg-orange-500' : 'border border-white hover:bg-white hover:text-gray-800';
+  const themeClasses = 
+    cta.theme === 'solid' ?
+      'bg-orange-400 hover:bg-orange-500'
+    : cta.theme === 'transparent' ?
+      'hover:opacity-80'
+    :
+      'border border-white hover:bg-white hover:text-gray-800'
+  ;
   return (
     !cta.isButton ?
       cta.isExternal ?
@@ -47,7 +54,7 @@ export default function Button({ cta }) {
           ${themeClasses}
           ${cta.classes && cta.classes}
         `}
-        onClick={cta.action}
+        onClick={cta.action ? cta.action : null}
       >
         {cta.text}
         {cta.icon === true &&

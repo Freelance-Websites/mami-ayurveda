@@ -21,7 +21,7 @@ export default function Header() {
     <>
       {/* header */}
       <header
-        className="sticky top-0 bg-white border-b border-b-gray-50 p-3 z-10"
+        className="sticky top-0 bg-white border-b border-b-gray-50 p-3 z-20"
       >
         <section
           className="container mx-auto flex items-center"
