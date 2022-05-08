@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Input from './forms/Input';
 import Textarea from './forms/Textarea';
 import Button from './forms/Button';
+import Footer from './Footer';
 
 export default function Contact({ title, subtitle, ctas }) {
   return (
@@ -44,7 +45,7 @@ export default function Contact({ title, subtitle, ctas }) {
           relative
           mx-auto
           max-w-lg
-          pt-52 lg:pt-64
+          pt-40 md:pt-52 lg:pt-64
           pb-24
           px-4
         "
@@ -79,6 +80,7 @@ export default function Contact({ title, subtitle, ctas }) {
           title={subtitle}
         />
       </article>
+      <Footer />
     </section>
   );
 }
@@ -86,7 +88,7 @@ export default function Contact({ title, subtitle, ctas }) {
 export function ContactForm({ title }) {
   return (
     <div
-      className="pt-8"
+      className="pt-4 md:pt-8"
     >
       {title &&
         <h6 className="font-serif text-white text-xl md:text-2xl">{title}</h6>
