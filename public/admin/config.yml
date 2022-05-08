@@ -163,3 +163,24 @@ collections:
               required: false,
               hint: "El link para el botón del encabezado",
             }
+          - {
+              label: "Título sección Doshas",
+              name: "doshasTitle",
+              widget: "string",
+              hint: "El título de la sección ¿Qué son los Doshas?",
+            }
+          - {
+              label: "Texto sección Doshas",
+              name: "doshasText",
+              widget: "text",
+              required: false,
+              hint: "El texto de la sección ¿Qué son los Doshas?",
+            }
+          - label: "Doshas"
+            name: "doshas"
+            widget: "list"
+            allow_add: false
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el dosha" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título para el dosha" }
+              - { label: "Texto", name: "text", widget: "string", hint: "El link para el dosha" }
