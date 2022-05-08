@@ -69,7 +69,7 @@ export default function Header() {
                 href="/ebooks"
               >
                 <a
-                  className="uppercase text-slate-800 text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:text-slate-600"
+                  className="uppercase text-slate-700 text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:text-slate-600"
                 >
                   E-books
                 </a>
@@ -80,7 +80,7 @@ export default function Header() {
                 href="/cursos-y-talleres"
               >
                 <a
-                  className="uppercase text-slate-800 text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:text-slate-600"
+                  className="uppercase text-slate-700 text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:text-slate-600"
                 >
                   Cursos y talleres
                 </a>
@@ -116,7 +116,7 @@ export default function Header() {
 const DropdownMenu = ({ isVisible, setIsVisible }) => {
   return (
     <div
-      className="absolute w-full h-screen bg-white top-0 flex items-center justify-center"
+      className="absolute w-full h-screen bg-white top-0 flex items-center justify-center z-10"
     >
       <button
         className="absolute top-8 right-8"
@@ -130,7 +130,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Inicio
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -144,7 +144,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/que-es-ayurveda"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               ¿Qu&eacute; es Ayurveda?
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -158,7 +158,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/sobre-mi"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Sobre m&iacute;
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -172,7 +172,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/sobre-mi#mi-enfoque"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Mi enfoque m&eacute;dico
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -186,7 +186,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/cursos-y-talleres"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Cursos y talleres
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -200,7 +200,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/ebooks"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               E-books
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -214,7 +214,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/turnos#preguntas-frecuentes"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Preguntas frecuentes
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -228,7 +228,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/turnos#solicitar-turno"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Turnos
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -242,7 +242,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/contacto"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-800 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Contacto
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">

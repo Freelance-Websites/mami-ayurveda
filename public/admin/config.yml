@@ -59,3 +59,17 @@ collections:
               required: false,
               hint: "El link para el botón del encabezado",
             }
+          - {
+              label: "Título secciones",
+              name: "sectionsTitle",
+              widget: "string",
+              hint: "El título de las secciones de la web",
+            }
+          - label: "Secciones"
+            name: "sections"
+            widget: "list"
+            allow_add: false
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la sección" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }

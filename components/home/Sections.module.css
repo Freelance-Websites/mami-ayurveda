@@ -1,0 +1,3 @@
+.Title span {
+  @apply md:block text-lime-900;
+}
