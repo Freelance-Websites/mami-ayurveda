@@ -169,7 +169,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
-            href="/sobre-mi#mi-enfoque"
+            href="/sobre-mi#my-practice"
           >
             <a
               className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"

@@ -13,7 +13,6 @@ export default function Contact({ title, subtitle, ctas }) {
       className="
         relative 
         -mt-16 lg:-mt-24 xl:-mt-32
-        xl:border-t-8 xl:border-white
       "
     >
       {/* Desktop Background image */}
@@ -69,7 +68,7 @@ export default function Contact({ title, subtitle, ctas }) {
                     theme: index === 0 ? 'outline' : 'transparent',
                     link: cta.link,
                     text: cta.text,
-                    icon: true
+                    icon: index === 0 ? true : false
                   }}
                 />
               </li>
