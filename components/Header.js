@@ -116,7 +116,7 @@ export default function Header() {
 const DropdownMenu = ({ isVisible, setIsVisible }) => {
   return (
     <div
-      className="absolute w-full h-screen bg-white top-0 flex items-center justify-center z-10"
+      className="fixed w-full h-screen bg-white top-0 flex items-center justify-center z-20"
     >
       <button
         className="absolute top-8 right-8"

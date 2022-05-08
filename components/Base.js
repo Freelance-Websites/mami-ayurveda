@@ -2,10 +2,10 @@
 import MainHead from "./MainHead";
 import Header from "./Header";
 
-export default function Base({ children }) {
+export default function Base({ title, children }) {
   return (
     <>
-      <MainHead />
+      <MainHead title={title} />
       <Header />
       <main>{children}</main>
     </>

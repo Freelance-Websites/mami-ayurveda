@@ -1,12 +1,15 @@
 import Head from 'next/head';
 import Script from 'next/script';
 
-export default function MainHead() {
+export default function MainHead({ title }) {
   return (
     <>
       <Head>
         {/* Title */}
-        <title>Mami Ayurveda</title>
+        <title>
+          {title ? `${title} • ` : ''}
+          Mami Ayurveda
+        </title>
 
         {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

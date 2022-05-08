@@ -55,7 +55,10 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
       />
       {/* Text */}
       <article
-        className="container mx-auto relative grid grid-cols-1 md:grid-cols-2"
+        className={`
+          ${showForm === false ? 'pt-16 md:pt-24 lg:pt-32 xl:pt-44' : 'md:grid-cols-2'}
+          container mx-auto relative grid grid-cols-1
+        `}
       >
         <div className="max-w-lg self-end mb-4 md:mb-0">
           <h1

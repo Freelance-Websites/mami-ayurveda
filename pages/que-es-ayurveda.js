@@ -6,24 +6,17 @@ import Cards from '../components/Cards';
 import Contact from '../components/Contact';
 
 // Content
-import { attributes } from "../content/home.md";
+import { attributes } from "../content/que-es-ayurveda.md";
 
-export default function Home() {
+export default function Ayurveda() {
   const {
     pageTitle,
+    heroDesktopImage,
+    heroMobileImage,
     heroTitle,
     heroDescription,
     heroCtaText,
-    heroCtaLink,
-    heroDesktopImage,
-    heroMobileImage,
-    sectionsTitle,
-    sections,
-    highlightsTitle,
-    highlights,
-    contactTitle,
-    contactFormTitle,
-    contactCTAs
+    heroCtaLink
   } = attributes;
 
   const cta = {
@@ -33,6 +26,7 @@ export default function Home() {
     isButton: false,
     theme: 'outline',
     classes: 'mt-2',
+    icon: true
   };
 
   return (
@@ -43,9 +37,9 @@ export default function Home() {
         cta={cta}
         desktopImage={heroDesktopImage}
         mobileImage={heroMobileImage}
-        showForm={true}
+        showForm={false}
       />
-      <Sections
+      {/* <Sections
         title={sectionsTitle}
         sections={sections}
       />
@@ -57,7 +51,7 @@ export default function Home() {
         title={contactTitle}
         subtitle={contactFormTitle}
         ctas={contactCTAs}
-      />
+      /> */}
     </Base>
   )
 }
