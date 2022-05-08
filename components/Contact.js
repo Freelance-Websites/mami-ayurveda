@@ -68,7 +68,8 @@ export default function Contact({ title, subtitle, ctas }) {
                     theme: index === 0 ? 'outline' : 'transparent',
                     link: cta.link,
                     text: cta.text,
-                    icon: index === 0 ? true : false
+                    icon: index === 0 ? true : false,
+                    isExternal: cta.link.startsWith('http') || cta.link.startsWith('www') ? true : false,
                   }}
                 />
               </li>
