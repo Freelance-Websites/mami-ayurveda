@@ -62,7 +62,7 @@ export default function Contact({ title, subtitle, ctas }) {
             {ctas.map((cta, index) =>
               <li
                 key={index}
-                className={ctas.length > 1 && 'ml-4'}
+                className={ctas.length > 1 ? 'ml-4' : undefined}
               >
                 <Button
                   cta={{
