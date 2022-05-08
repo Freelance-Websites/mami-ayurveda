@@ -2,14 +2,12 @@ import Head from 'next/head';
 import Script from 'next/script';
 
 export default function MainHead({ title }) {
+  const formattedTitle = title ? `${title} • Mami Ayurveda` : 'Mami Ayurveda';
   return (
     <>
       <Head>
         {/* Title */}
-        <title>
-          {title ? `${title} • ` : ''}
-          Mami Ayurveda
-        </title>
+        <title>{formattedTitle}</title>
 
         {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
