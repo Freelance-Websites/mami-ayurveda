@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // Components
-import Button from './Button';
+import Button from './forms/Button';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);

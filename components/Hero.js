@@ -2,9 +2,9 @@
 import Image from 'next/image';
 
 // Components
-import Button from './Button';
-import Input from './Input';
-import Select from './Select';
+import Button from './forms/Button';
+import Input from './forms/Input';
+import Select from './forms/Select';
 
 export default function Hero({ title, text, cta, desktopImage, mobileImage, showForm }) {
 
