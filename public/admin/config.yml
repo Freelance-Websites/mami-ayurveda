@@ -71,5 +71,21 @@ collections:
             allow_add: false
             fields:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la sección" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título de la sección" }
+              - { label: "Link", name: "link", widget: "string", hint: "El link de la sección" }
+          - {
+              label: "Título destacados",
+              name: "highlightsTitle",
+              widget: "string",
+              hint: "El título de las secciones destacadas de la web",
+            }
+          - label: "Destacados"
+            name: "highlights"
+            widget: "list"
+            allow_add: true
+            hint: "Podés cargar cuantas quieras, pero sólo se muestran 2 de manera aleatoria."
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el destacado" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título del destacado" }
+              - { label: "Texto", name: "text", widget: "string", hint: "El texto del destacado" }
+              - { label: "Link", name: "link", widget: "string", hint: "El link del destacado" }

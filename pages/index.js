@@ -2,6 +2,7 @@
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Sections from '../components/home/Sections';
+import Cards from '../components/Cards';
 
 // Content
 import { attributes } from "../content/home.md";
@@ -15,7 +16,9 @@ export default function Home() {
     heroDesktopImage,
     heroMobileImage,
     sectionsTitle,
-    sections
+    sections,
+    highlightsTitle,
+    highlights
   } = attributes;
 
   const cta = {
@@ -40,6 +43,10 @@ export default function Home() {
       <Sections
         title={sectionsTitle}
         sections={sections}
+      />
+      <Cards
+        title={highlightsTitle}
+        content={highlights}
       />
     </Base>
   )
