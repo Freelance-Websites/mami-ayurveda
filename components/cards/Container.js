@@ -5,7 +5,7 @@ import SideBySide from './SideBySide';
 // Styles
 import styles from './Container.module.css';
 
-export default function CardsContainer({ type, title, content, classes }) {
+export default function CardsContainer({ type, title, text, content, classes }) {
   return (
     <section
       className={`
@@ -18,8 +18,14 @@ export default function CardsContainer({ type, title, content, classes }) {
           dangerouslySetInnerHTML={{ __html: title }}
           className={`
             ${styles.Title}
-            font-serif text-slate-700 text-2xl md:text-4xl text-center
+            font-serif text-slate-700 text-2xl md:text-4xl text-center px-4
           `}
+        />
+      }
+      {text &&
+        <p
+          className="text-slate-500 mt-4 max-w-md mx-auto text-center px-4"
+          dangerouslySetInnerHTML={{ __html: text }}
         />
       }
       <ul

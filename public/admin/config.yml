@@ -347,3 +347,102 @@ collections:
             fields:
               - { label: "Texto del botón", name: "text", widget: "string" }
               - { label: "Link del botón", name: "link", widget: "string" }
+      # Ebooks Structure
+      - label: "E-books"
+        name: "ebooks"
+        file: "content/ebooks.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Imagen escritorio encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de escritorio",
+            }
+          - {
+              label: "Imagen mobile encabezado",
+              name: "heroMobileImage",
+              widget: "image",
+              required: false,
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de dispositivos móviles",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
+            }
+          - {
+              label: "Texto encabezado",
+              name: "heroDescription",
+              widget: "text",
+              required: false,
+              hint: "Podés usar HTML en este campo",
+            }
+          - {
+              label: "Texto del CTA encabezado",
+              name: "heroCtaText",
+              widget: "string",
+              required: false,
+              hint: "El texto para el botón del encabezado",
+            }
+          - {
+              label: "Link del CTA encabezado",
+              name: "heroCtaLink",
+              widget: "string",
+              required: false,
+              hint: "El link para el botón del encabezado",
+            }
+          - {
+              label: "Título E-books",
+              name: "ebooksTitle",
+              widget: "string",
+              hint: "El título de la seccion Ebooks",
+              required: false,
+            }
+          - {
+              label: "Texto E-books",
+              name: "ebooksText",
+              widget: "text",
+              required: false,
+              hint: "El texto de la seccion Ebooks",
+            }
+          - label: "Ebooks"
+            name: "ebooks"
+            widget: "list"
+            allow_add: true
+            hint: "Podés cargar cuantas quieras."
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el destacado" }
+              - { label: "Título", name: "title", widget: "string", hint: "Opcional. El título del destacado", required: false }
+              - { label: "Texto", name: "text", widget: "string", hint: "Opcional. El text del destacado", required: false }
+              - { label: "URL del link", name: "linkUrl", widget: "string", hint: "La URL para el link del destacado" }
+              - { label: "Texto del link", name: "linkText", required: false, widget: "string", hint: "Opcional. El texto del link del destacado" }
+          - {
+              label: "Título contacto",
+              name: "contactTitle",
+              widget: "string",
+              hint: "El título de la sección de contacto",
+            }
+          - {
+              label: "Título formulario de contacto",
+              name: "contactFormTitle",
+              widget: "string",
+              hint: "El título del formulario de contacto",
+              required: false
+            }
+          - label: "Botones contacto"
+            name: "contactCTAs"
+            widget: "list"
+            allow_add: true
+            max: 2
+            hint: "Máximo 2"
+            fields:
+              - { label: "Texto del botón", name: "text", widget: "string" }
+              - { label: "Link del botón", name: "link", widget: "string" }
