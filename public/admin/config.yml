@@ -478,6 +478,12 @@ collections:
               hint: "El título del encabezado",
             }
           - {
+            label: "Contenido",
+            name: "body",
+            widget: "markdown",
+            hint: "El contenido para la página",
+          }
+          - {
               label: "Título contacto",
               name: "contactTitle",
               widget: "string",
@@ -489,4 +495,28 @@ collections:
               widget: "text",
               hint: "El texto del formulario de contacto",
               required: false
+            }
+      # Contact Structure
+      - label: "Contacto"
+        name: "contact"
+        file: "content/contacto.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Imagen escritorio encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de escritorio",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
             }
