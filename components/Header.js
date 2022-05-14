@@ -2,12 +2,14 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // Components
 import Button from './forms/Button';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   const cta = {
     link: '/turnos',
@@ -69,7 +71,10 @@ export default function Header() {
                 href="/ebooks"
               >
                 <a
-                  className="uppercase text-slate-700 text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:text-slate-600"
+                  className={`
+                    ${router.asPath === '/ebooks' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
+                    uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
+                  `}
                 >
                   E-books
                 </a>
@@ -80,7 +85,10 @@ export default function Header() {
                 href="/cursos-y-talleres"
               >
                 <a
-                  className="uppercase text-slate-700 text-xs font-semibold tracking-wider transition ease-in-out duration-200 hover:text-slate-600"
+                  className={`
+                    ${router.asPath === '/cursos-y-talleres' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
+                    uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
+                  `}
                 >
                   Cursos y talleres
                 </a>

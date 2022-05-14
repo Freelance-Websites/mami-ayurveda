@@ -58,7 +58,7 @@ export default function Card({ card }) {
         bg-white
       "
     >
-      {card.linkText.includes('http') ?
+      {card.linkUrl && !card.linkUrl.includes('http') ?
         <Link href={card.linkUrl}>
           <a className="hover:opacity-90 transition ease-in-out duration-200">
             {content}
