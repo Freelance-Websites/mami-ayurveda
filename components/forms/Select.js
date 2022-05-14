@@ -4,7 +4,7 @@ export default function Select({ id, type, label, required, classes, options }) 
       className={classes && classes}
     >
       <label
-        className="uppercase text-xs font-semibold tracking-widest text-gray-400 mb-2 block"
+        className="uppercase text-xs font-semibold tracking-widest text-inherit mb-2 block"
       >
         {label}
       </label>

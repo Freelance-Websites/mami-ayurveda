@@ -1,0 +1,29 @@
+/* Hide the main title since we're showing it on the collapsible panel */
+.Container h2 {
+  @apply hidden;
+}
+
+.Container h3 {
+  @apply font-bold mt-8;
+}
+
+.Container h3:first-of-type {
+  @apply mt-0;
+}
+
+.Container p {
+  @apply mb-2;
+}
+
+.Container ul {
+  @apply mt-4;
+}
+
+.Container ul li {
+  @apply mb-4;
+}
+
+.Container ul li:before {
+  content: '✓';
+  @apply mr-2 text-emerald-700 bg-emerald-100/50 p-2 rounded-full w-11 inline-block text-center;
+}

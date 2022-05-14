@@ -446,3 +446,47 @@ collections:
             fields:
               - { label: "Texto del botón", name: "text", widget: "string" }
               - { label: "Link del botón", name: "link", widget: "string" }
+      # Turnos Structure
+      - label: "Turnos"
+        name: "turnos"
+        file: "content/turnos.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Imagen escritorio encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de escritorio",
+            }
+          - {
+              label: "Imagen mobile encabezado",
+              name: "heroMobileImage",
+              widget: "image",
+              required: false,
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de dispositivos móviles",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
+            }
+          - {
+              label: "Título contacto",
+              name: "contactTitle",
+              widget: "string",
+              hint: "El título de la sección de contacto",
+            }
+          - {
+              label: "Texto contacto",
+              name: "contactText",
+              widget: "text",
+              hint: "El texto del formulario de contacto",
+              required: false
+            }

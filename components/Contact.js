@@ -3,17 +3,22 @@ import Image from 'next/image';
 
 // Components
 import Input from './forms/Input';
+import Select from './forms/Select';
 import Textarea from './forms/Textarea';
 import Button from './forms/Button';
 import Footer from './Footer';
 
-export default function Contact({ title, subtitle, ctas }) {
+export default function Contact({ title, text, subtitle, ctas, type }) {
   return (
     <section
-      className="
-        relative 
-        -mt-16 lg:-mt-24 xl:-mt-32
-      "
+      className={`
+        relative
+        ${type === 'appointments' ?
+          '-mt-20'
+         :
+          '-mt-16 lg:-mt-24 xl:-mt-32'
+        }
+      `}
     >
       {/* Desktop Background image */}
       <div className="absolute top-0 left-0 w-full h-full hidden lg:block">
@@ -55,10 +60,13 @@ export default function Contact({ title, subtitle, ctas }) {
           >
             {title}
           </h6>
+          {text &&
+            <p className="text-white pt-2 text-lg text-center">{text}</p>
+          }
           <ul
             className="flex items-center md:items-baseline justify-center flex-col md:flex-row py-6"
           >
-            {ctas.map((cta, index) =>
+            {ctas && ctas.map((cta, index) =>
               <li
                 key={index}
                 className={index > 0 ? 'mt-4 md:ml-4' : undefined}
@@ -76,9 +84,13 @@ export default function Contact({ title, subtitle, ctas }) {
             )}
           </ul>
         </div>
-        <ContactForm
-          title={subtitle}
-        />
+        {type === 'appointments' ?
+          <AppointmentsForm />
+        :
+          <ContactForm
+            title={subtitle}
+          />
+        }
       </article>
       <Footer />
     </section>
@@ -131,4 +143,99 @@ export function ContactForm({ title }) {
       </form>
     </div>
   );
+}
+
+export function AppointmentsForm() {
+  return (
+    <form
+      className="grid grid-cols-1 md:grid-cols-2 gap-4"
+    >
+      <Input
+        id="name"
+        type="text"
+        label="Nombre y apellido"
+        placeholder="Nombre completo del paciente"
+        required={true}
+        classes="text-white md:col-span-full"
+      />
+      <Select
+        id="user-type"
+        label="Consulta"
+        required={true}
+        classes="text-white"
+        options={[
+          {
+            text: 'Pediátrica',
+            value: 'pediatrica',
+            selected: true,
+            disabled: false
+          },
+          {
+            text: 'Adulto',
+            value: 'adulto',
+            selected: false,
+            disabled: false
+          },
+          {
+            text: 'Familia',
+            value: 'familia',
+            selected: false,
+            disabled: false
+          },
+          {
+            text: 'Embarazada',
+            value: 'embarazada',
+            selected: false,
+            disabled: false
+          },
+        ]}
+      />
+      <Select
+        id="type"
+        label="Modalidad"
+        required={true}
+        classes="text-white"
+        options={[
+          {
+            text: 'Online',
+            value: 'online',
+            selected: true,
+            disabled: false
+          },
+          {
+            text: 'Presencial',
+            value: 'presencial',
+            selected: false,
+            disabled: false
+          },
+        ]}
+      />
+      <Input
+        id="phone"
+        type="number"
+        label="Número de celular"
+        placeholder="Número completo con código de área"
+        required={true}
+        classes="text-white md:col-span-full"
+        prepend="+54 9"
+      />
+      <Input
+        id="email"
+        type="email"
+        label="Email"
+        placeholder="ejemplo@gmail.com"
+        required={true}
+        classes="text-white md:col-span-full"
+      />
+      <Button
+        cta={{
+          theme: 'transparent',
+          isButton: true,
+          text: 'Reservar turno',
+          icon: true,
+          classes: "col-span-full justify-end",
+        }}
+      />
+    </form>
+  )
 }

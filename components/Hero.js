@@ -6,7 +6,7 @@ import Button from './forms/Button';
 import Input from './forms/Input';
 import Select from './forms/Select';
 
-export default function Hero({ title, text, cta, desktopImage, mobileImage, showForm }) {
+export default function Hero({ title, text, cta, desktopImage, mobileImage, showForm, position }) {
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -33,6 +33,7 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
           objectFit="cover"
           alt="Foto de Vicky sentada en unos escalones de piedra"
           priority
+          objectPosition={position ? position : undefined}
         />
       </div>
       {/* Mobile image */}
@@ -125,6 +126,7 @@ export function Form() {
           id="user-type"
           label="Consulta"
           required={true}
+          classes="text-gray-400"
           options={[
             {
               text: 'Pediátrica',
@@ -156,6 +158,7 @@ export function Form() {
           id="type"
           label="Modalidad"
           required={true}
+          classes="text-gray-400"
           options={[
             {
               text: 'Online',
