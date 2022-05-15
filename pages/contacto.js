@@ -59,7 +59,17 @@ export function Form({ title }) {
       </h2>
       <form
         className="grid grid-cols-1 gap-4"
+        name="contact"
+        data-netlify="true"
+        method="POST"
       >
+        {/* Netlify stuff */}
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
         <Input
           id="name"
           type="text"

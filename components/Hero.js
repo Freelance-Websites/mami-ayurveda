@@ -7,12 +7,6 @@ import Input from './forms/Input';
 import Select from './forms/Select';
 
 export default function Hero({ title, text, cta, desktopImage, mobileImage, showForm, position }) {
-
-  const submitForm = (e) => {
-    e.preventDefault();
-    console.log('submitting form');
-  }
-
   return (
     <section
       className="
@@ -113,7 +107,17 @@ export function Form() {
       </h2>
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        name="appointments"
+        data-netlify="true"
+        method="POST"
       >
+        {/* Netlify stuff */}
+        <input type="hidden" name="form-name" value="contact-form" />
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
         <Input
           id="name"
           type="text"
