@@ -113,7 +113,7 @@ export function Form() {
         name="appointments"
         data-netlify="true"
         method="POST"
-        action={activeType === 'online' ? 'https://www.google.com.ar' : 'https://www.lanacion.com.ar'}
+        action={activeType === 'online' ? 'https://calendly.com/dravictoriagallo-ayurveda/' : 'https://calendly.com/victoriaegallo/'}
       >
         {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="appointments" />
