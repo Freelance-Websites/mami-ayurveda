@@ -8,7 +8,7 @@ heroCtaText: Conocé más
 heroCtaLink: '#details'
 ebooksTitle: Cursos y <span>Talleres</span>
 ebooksText: Una vez que abonas desde el link de pago, te llega a tu mail dentro de las próximas 24 hs hábiles.
-ebooks:
+ebooksList:
   - image: /images/uploads/ebooks/ebook-1.jpg
     icon: /images/uploads/icons/ebooks/ebook-1.svg
     title: Introducción al Ayurveda
