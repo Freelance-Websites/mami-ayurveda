@@ -446,6 +446,64 @@ collections:
             fields:
               - { label: "Texto del botón", name: "text", widget: "string" }
               - { label: "Link del botón", name: "link", widget: "string" }
+      # Courses Structure
+      - label: "Cursos y talleres"
+        name: "courses"
+        file: "content/cursos-y-talleres.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Imagen escritorio encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución de escritorio",
+            }
+          - {
+              label: "Imagen mobile encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "La imagen que se muestra en el encabezado de la página, en la resolución mobile",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
+            }
+          - label: "Información taller alimentación"
+            name: "alimentationCourse"
+            widget: "list"
+            allow_add: false
+            hint: "Información para el curso de alimentación familiar"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta" }
+              - { label: "Texto", name: "text", widget: "string", hint: "El texto de la tarjeta"}
+              -  label: "Características"
+                 name: "features"
+                 widget: "list"
+                 hint: "Las características del curso"
+                 allow_add: true
+                 required: false
+                 max: 3
+                 fields:
+                   - { label: "Texto", name: "text", widget: "text", hint: "El texto de la característica" }
+              -  label: "CTAs"
+                 name: "ctas"
+                 widget: "list"
+                 hint: "Los botones del curso"
+                 allow_add: true
+                 required: false
+                 max: 2
+                 fields:
+                   - { label: "Texto", name: "text", widget: "string", hint: "El texto del botón" }
+                   - { label: "URL", name: "url", widget: "string", hint: "El link del botón" }
       # Turnos Structure
       - label: "Turnos"
         name: "turnos"
