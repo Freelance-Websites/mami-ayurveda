@@ -642,3 +642,42 @@ collections:
               widget: "string",
               hint: "El título del encabezado",
             }
+      # Success Structure
+      - label: "Éxito"
+        name: "success"
+        file: "content/exito.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
+            }
+          - {
+              label: "Texto encabezado",
+              name: "heroDescription",
+              widget: "text",
+              hint: "El texto del encabezado",
+              required: false,
+            }
+          - {
+              label: "Link encabezado",
+              name: "heroCtaLink",
+              widget: "string",
+              hint: "El link para el botón del encabezado",
+              required: false,
+            }
+          - {
+              label: "Texto link encabezado",
+              name: "heroCtaText",
+              widget: "string",
+              hint: "El texto para el botón del encabezado",
+              required: false,
+            }

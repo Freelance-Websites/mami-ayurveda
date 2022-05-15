@@ -6,6 +6,7 @@ import Base from '../components/Base';
 import Input from '../components/forms/Input';
 import Textarea from '../components/forms/Textarea';
 import Button from '../components/forms/Button';
+import Footer from '../components/Footer';
 
 // Content
 import { attributes } from "../content/contacto.md";
@@ -37,6 +38,7 @@ export default function Contact() {
         {/* Form */}
         <Form title={heroTitle} />
       </section>
+      <Footer />
     </Base>
   )
 }
