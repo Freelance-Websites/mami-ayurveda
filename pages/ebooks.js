@@ -18,7 +18,7 @@ export default function Ebooks() {
     heroMobileImage,
     ebooksTitle,
     ebooksText,
-    ebooks,
+    ebookList,
     contactTitle,
     contactFormTitle,
     contactCTAs
@@ -51,7 +51,7 @@ export default function Ebooks() {
         id="details"
       >
         <CardsContainer
-          content={ebooks}
+          content={ebookList}
           type="standard"
           title={ebooksTitle}
           text={ebooksText}

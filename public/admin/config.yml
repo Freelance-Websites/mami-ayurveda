@@ -414,7 +414,7 @@ collections:
               hint: "El texto de la seccion Ebooks",
             }
           - label: "Ebooks"
-            name: "ebooks"
+            name: "ebookList"
             widget: "list"
             allow_add: true
             hint: "Podés cargar cuantas quieras."
