@@ -1,4 +1,4 @@
-export default function Select({ id, type, label, required, classes, options }) {
+export default function Select({ id, type, label, required, classes, options, onChangeMethod }) {
   return (
     <div
       className={classes && classes}
@@ -17,6 +17,7 @@ export default function Select({ id, type, label, required, classes, options }) 
           w-full rounded p-2
           text-sm text-gray-700
         "
+        onChange={onChangeMethod ? onChangeMethod : undefined}
       >
         {options.map((option, index) =>
           <option

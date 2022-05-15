@@ -1,4 +1,5 @@
 // Globals
+import { useState } from 'react';
 import Image from 'next/image';
 
 // Components
@@ -81,6 +82,8 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
 }
 
 export function Form() {
+  const [activeType, setActiveType] = useState('online');
+
   const formCTA = {
     action: (e) => submitForm(e),
     text: 'Reservar',
@@ -110,6 +113,7 @@ export function Form() {
         name="appointments"
         data-netlify="true"
         method="POST"
+        action={activeType === 'online' ? 'https://www.google.com.ar' : 'https://www.lanacion.com.ar'}
       >
         {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="appointments" />
@@ -163,6 +167,7 @@ export function Form() {
           label="Modalidad"
           required={true}
           classes="text-gray-400"
+          onChangeMethod={(e) => setActiveType(e.currentTarget.value)}
           options={[
             {
               text: 'Online',

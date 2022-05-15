@@ -1,4 +1,5 @@
 // Globals
+import { useState } from 'react';
 import Image from 'next/image';
 
 // Components
@@ -161,12 +162,14 @@ export function ContactForm({ title }) {
 }
 
 export function AppointmentsForm() {
+  const [activeType, setActiveType] = useState('online');
   return (
     <form
       className="grid grid-cols-1 md:grid-cols-2 gap-4"
       name="appointments"
       data-netlify="true"
       method="POST"
+      action={activeType === 'online' ? 'https://www.google.com.ar' : 'https://www.lanacion.com.ar'}
     >
       {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="appointments" />
@@ -220,6 +223,7 @@ export function AppointmentsForm() {
         label="Modalidad"
         required={true}
         classes="text-white"
+        onChangeMethod={(e) => setActiveType(e.currentTarget.value)}
         options={[
           {
             text: 'Online',
