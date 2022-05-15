@@ -1,7 +1,7 @@
 // Components
 import Base from '../components/Base';
 import Hero from '../components/Hero';
-import CardsContainer from '../components/Cards/Container';
+import CardsContainer from '../components/cards/Container';
 
 // Content
 import { attributes } from "../content/cursos-y-talleres.md";

@@ -2,7 +2,7 @@
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Doshas from '../components/que-es-ayurveda/Doshas';
-import CardsContainer from '../components/Cards/Container';
+import CardsContainer from '../components/cards/Container';
 import Contact from '../components/Contact';
 
 // Content
