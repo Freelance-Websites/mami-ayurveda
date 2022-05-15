@@ -15,7 +15,10 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
         relative
         ${type === 'appointments' ?
           '-mt-20'
-         : type === 'courses' ? ''
+         : type === 'courses' ?
+          ''
+         : type === 'success' ?
+          'min-h-screen'
          :
           '-mt-16 lg:-mt-24 xl:-mt-32'
         }
@@ -46,14 +49,10 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
       />
       {/* Content */}
       <article
-        className="
-          relative
-          mx-auto
-          max-w-lg
-          pt-40 md:pt-52 lg:pt-64
-          pb-24
-          px-4
-        "
+        className={`
+          relative mx-auto max-w-lg
+          ${type === 'success' ? 'min-h-screen flex items-center' : 'pt-40 md:pt-52 lg:pt-64 pb-24 px-4'}
+        `}
       >
         <div>
           <h6
@@ -62,7 +61,10 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
             {title}
           </h6>
           {text &&
-            <p className="text-white pt-2 text-lg text-center">{text}</p>
+            <p
+              className="text-white pt-2 text-lg text-center"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
           }
           <ul
             className="flex items-center md:items-baseline justify-center flex-col md:flex-row py-6"
@@ -87,6 +89,7 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
         </div>
         {type === 'appointments' ?
           <AppointmentsForm />
+        : type === 'success' ? undefined
         :
           <ContactForm
             title={subtitle}
@@ -111,6 +114,7 @@ export function ContactForm({ title }) {
         name="contact"
         data-netlify="true"
         method="POST"
+        action="/exito"
       >
         {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="contact" />

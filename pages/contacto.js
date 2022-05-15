@@ -42,7 +42,6 @@ export default function Contact() {
 }
 
 export function Form({ title }) {
-
   return (
     <div
       className="
@@ -62,6 +61,7 @@ export function Form({ title }) {
         name="contact"
         data-netlify="true"
         method="POST"
+        action="/exito"
       >
         {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="contact" />
