@@ -1,7 +1,7 @@
 // Components
 import Base from '../components/Base';
 import Hero from '../components/Hero';
-import CardsContainer from '../components/Cards/Container';
+import CardsContainer from '../components/ards/Container';
 import Contact from '../components/Contact';
 
 // Content
