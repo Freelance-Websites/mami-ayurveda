@@ -2,7 +2,7 @@
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Sections from '../components/home/Sections';
-import CardsContainer from '../components/Cards/Container';
+import CardsContainer from '../components/cards/Container';
 import Contact from '../components/Contact';
 
 // Content
