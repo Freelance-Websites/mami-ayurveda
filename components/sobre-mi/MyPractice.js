@@ -8,7 +8,7 @@ import Senses from './Senses';
 export default function MyPractice({ image, title, content, senses }) {
   return (
     <article
-      id="my-practice"
+      id="mi-enfoque"
       className="bg-lime-50 relative"
     >
       <div

@@ -59,6 +59,7 @@ export default function Ayurveda() {
           relative md:-top-32
           mt-12 sm:mt-0 sm:pt-24 md:pt-32 lg:pt-48
         "
+        id="conoce-tus-doshas"
       >
         <CardsContainer
           content={testDoshas}

@@ -36,6 +36,7 @@ export default function Courses() {
         classes="
           py-4 sm:py-16 md:py-24 lg:py-32
         "
+        id="taller-alimentacion-familiar-ayur"
       />
       <section
         className="
@@ -43,6 +44,7 @@ export default function Courses() {
           relative
           pb-8 sm:py-16 md:py-24 lg:py-32
         "
+        id="formacion-ayurveda-cuerpo-mente"
       >
         <CardsContainer
           content={formationCourse}

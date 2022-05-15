@@ -5,13 +5,14 @@ import SideBySide from './SideBySide';
 // Styles
 import styles from './Container.module.css';
 
-export default function CardsContainer({ type, title, text, content, classes }) {
+export default function CardsContainer({ type, title, text, content, classes, id }) {
   return (
     <section
       className={`
         container mx-auto relative z-10
         ${classes ? classes : undefined}
       `}
+      id={id ? id : undefined}
     >
       {title &&
         <h4
