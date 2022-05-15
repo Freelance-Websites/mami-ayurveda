@@ -6,6 +6,7 @@ heroTitle: Cursos y talleres
 alimentationCourse:
   - image: /images/uploads/courses/alimentation.jpg
     title: Taller alimentación <br/>familiar <span>Ayur</span>
+    alignment: izquierda
     text: Un Taller dónde aprenderás las bases de la alimentación Ayurvédica y
       conceptos claves de nutrición moderna para aplicar en tu día a día.<br
       />Es un taller online asincrónico para hacer a tu ritmo. Disponible todo

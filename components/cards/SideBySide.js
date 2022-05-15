@@ -1,6 +1,9 @@
 // Globals
 import Image from 'next/image';
 
+// Components
+import Button from '../forms/Button';
+
 // Styles
 import styles from './SideBySide.module.css';
 
@@ -12,7 +15,9 @@ export default function SideBySide({ card }) {
         items-center
       "
     >
-      <div>
+      <div
+        className={`${card.alignment && card.alignment === 'izquierda' && 'order-last'}`}
+      >
         <h3
           dangerouslySetInnerHTML={{ __html: card.title }}
           className={`
@@ -27,9 +32,54 @@ export default function SideBySide({ card }) {
             ${styles.Text}
           `}
         />
+        {card.features.length > 0 &&
+          <ul
+            className="my-4 text-slate-500"
+          >
+            {card.features.map((feature, index) =>
+              <li
+                key={index}
+                className="flex items-center justify-between"
+              >
+                <div className="mr-4 text-emerald-700 bg-emerald-100/50 rounded-full w-12 h-12 inline-flex items-center justify-center">
+                  <svg fill="none" height="13" viewBox="0 0 18 13" width="18" xmlns="http://www.w3.org/2000/svg" className="fill-current text-inherit"><path d="m15.293.203125-9.24612 9.246095-3.375-3.41016c-.17579-.14062-.45704-.14062-.59766 0l-1.01953 1.01953c-.140628.14063-.140628.42188 0 .59766l4.71093 4.67575c.17579.1758.42188.1758.59766 0l10.54692-10.54684c.1406-.14063.1406-.42188 0-.59766l-1.0196-.984375c-.1406-.1757812-.4218-.1757812-.5976 0z"/></svg>
+                </div>
+                <p className="flex-1">
+                  {feature.featureText}
+                </p>
+              </li>
+            )}
+          </ul>
+        }
+        {card.ctas.length > 0 &&
+          <ol
+            className="flex pt-4"
+          >
+            {card.ctas.map((cta, index) =>
+              <li
+                key={index}
+              >
+                <Button
+                  cta={{
+                    isExternal: true,
+                    isButton: false,
+                    icon: index === 0 ? true : false,
+                    link: cta.ctaUrl,
+                    text: cta.ctaText,
+                    theme: index === 0 ? 'solid' : 'transparent',
+                    classes: index === 0 ? undefined : 'text-slate-500 ml-4'
+                  }}
+                />
+              </li>
+            )}
+          </ol>
+        }
       </div>
       <div
-        className="relative h-96 order-first lg:order-last"
+        className={`
+          relative h-96
+          ${card.alignment && card.alignment === 'izquierda' ? 'order-first' : 'order-first lg:order-last'}
+        `}
       >
         <svg
           width="72"

@@ -476,15 +476,21 @@ collections:
               widget: "string",
               hint: "El título del encabezado",
             }
-          - label: "Información taller alimentación"
+          - label: "Taller alimentación"
             name: "alimentationCourse"
             widget: "list"
             allow_add: false
             hint: "Información para el curso de alimentación familiar"
+            summary: '{{fields.title}}'
             fields:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
-              - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta" }
-              - { label: "Texto", name: "text", widget: "string", hint: "El texto de la tarjeta"}
+              - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta. Podés usar HTML en este campo." }
+              - { label: "Texto", name: "text", widget: "string", hint: "El texto de la tarjeta. Podés usar HTML en este campo."}
+              -  label: "Alineación de la tarjeta"
+                 name: "alignment"
+                 widget: "select"
+                 hint: "Útil para darle dinamismo a la página"
+                 options: ["izquierda", "derecha"]
               -  label: "Características"
                  name: "features"
                  widget: "list"
