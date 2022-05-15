@@ -8,25 +8,6 @@ import Button from '../forms/Button';
 import styles from './SideBySide.module.css';
 
 export default function SideBySide({ card }) {
-  const featuresMarkup =
-    <ul
-      className="my-4 text-slate-500"
-    >
-      {card.features.map((feature, index) =>
-        <li
-          key={index}
-          className="flex flex-col md:flex-row gap-4 md:items-center justify-between"
-        >
-          <div className="text-emerald-700 bg-emerald-100/50 rounded-full w-12 h-12 inline-flex items-center justify-center">
-            <svg fill="none" height="13" viewBox="0 0 18 13" width="18" xmlns="http://www.w3.org/2000/svg" className="fill-current text-inherit"><path d="m15.293.203125-9.24612 9.246095-3.375-3.41016c-.17579-.14062-.45704-.14062-.59766 0l-1.01953 1.01953c-.140628.14063-.140628.42188 0 .59766l4.71093 4.67575c.17579.1758.42188.1758.59766 0l10.54692-10.54684c.1406-.14063.1406-.42188 0-.59766l-1.0196-.984375c-.1406-.1757812-.4218-.1757812-.5976 0z"/></svg>
-          </div>
-          <p className="flex-1">
-            {feature.featureText}
-          </p>
-        </li>
-      )}
-    </ul>;
-
   return (
     <li
       className="
@@ -51,8 +32,26 @@ export default function SideBySide({ card }) {
             ${styles.Text}
           `}
         />
-        {card.features.length > 0 && card.features.length < 3 && featuresMarkup}
-        {card.ctas.length > 0 &&
+        {card.features && card.features.length > 0 && card.features.length < 3 &&
+          <ul
+            className="my-4 text-slate-500"
+          >
+            {card.features.map((feature, index) =>
+              <li
+                key={index}
+                className="flex flex-col md:flex-row gap-4 md:items-center justify-between"
+              >
+                <div className="text-emerald-700 bg-emerald-100/50 rounded-full w-12 h-12 inline-flex items-center justify-center">
+                  <svg fill="none" height="13" viewBox="0 0 18 13" width="18" xmlns="http://www.w3.org/2000/svg" className="fill-current text-inherit"><path d="m15.293.203125-9.24612 9.246095-3.375-3.41016c-.17579-.14062-.45704-.14062-.59766 0l-1.01953 1.01953c-.140628.14063-.140628.42188 0 .59766l4.71093 4.67575c.17579.1758.42188.1758.59766 0l10.54692-10.54684c.1406-.14063.1406-.42188 0-.59766l-1.0196-.984375c-.1406-.1757812-.4218-.1757812-.5976 0z"/></svg>
+                </div>
+                <p className="flex-1">
+                  {feature.featureText}
+                </p>
+              </li>
+            )}
+          </ul>
+        }
+        {card.ctas && card.ctas.length > 0 &&
           <ol
             className="flex pt-4"
           >
