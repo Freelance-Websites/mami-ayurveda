@@ -15,6 +15,7 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
         relative
         ${type === 'appointments' ?
           '-mt-20'
+         : type === 'courses' ? ''
          :
           '-mt-16 lg:-mt-24 xl:-mt-32'
         }
