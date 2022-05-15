@@ -112,7 +112,7 @@ export function Form() {
         method="POST"
       >
         {/* Netlify stuff */}
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input type="hidden" name="form-name" value="appointments" />
         <p className="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />

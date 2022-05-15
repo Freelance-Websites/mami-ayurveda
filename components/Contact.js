@@ -108,12 +108,12 @@ export function ContactForm({ title }) {
       }
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4"
-        name="contact-form"
+        name="contact"
         data-netlify="true"
         method="POST"
       >
         {/* Netlify stuff */}
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
@@ -160,12 +160,12 @@ export function AppointmentsForm() {
   return (
     <form
       className="grid grid-cols-1 md:grid-cols-2 gap-4"
-      name="appointments-form"
+      name="appointments"
       data-netlify="true"
       method="POST"
     >
       {/* Netlify stuff */}
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input type="hidden" name="form-name" value="apointments" />
         <p className="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
