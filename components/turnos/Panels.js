@@ -16,6 +16,7 @@ export default function Panels({ titles, content}) {
         z-10
       "
     >
+      <h2 className="font-serif text-xl md:text-2xl text-slate-700 text-left mt-12 md:mt-16 mb-4">¿Qui&eacute;nes pueden atenderse?</h2>
       {titles.map((title, index) =>
         <Panel
           title={title}

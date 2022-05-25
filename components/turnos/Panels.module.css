@@ -27,3 +27,7 @@
   content: '✓';
   @apply mr-2 text-emerald-700 bg-emerald-100/50 p-2 rounded-full w-11 inline-block text-center;
 }
+
+.Container img {
+  @apply max-w-xl rounded-lg mb-4 md:mt-4 md:mb-8 w-full;
+}
