@@ -11,7 +11,7 @@ heroCtaLink: /sobre-mi
 sectionsTitle: Todo gran cambio comienza por un pequeño paso.<span>¿Te animás?</span>
 sections:
   - image: /images/uploads/icons/homepage-section-1.svg
-    title: Mi práctica médica
+    title: Mi enfoque médico
     link: /sobre-mi#mi-enfoque
   - image: /images/uploads/icons/homepage-section-2.svg
     title: E-books

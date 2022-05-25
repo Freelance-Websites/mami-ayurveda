@@ -52,6 +52,7 @@ export default function AboutMe() {
         id="about"
         bottomPadding="pb-8 sm:pb-16 md:pb-32 lg:pb-48"
         topPadding="pt-8 sm:pt-16 md:pt-24 lg:pt-32"
+        classes="scroll-mt-12"
       />
       <MyPractice
         image={myPracticeImage}

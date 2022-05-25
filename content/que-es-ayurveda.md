@@ -25,7 +25,7 @@ highlightsTitle: ¿Sentís que la medicina <br />convencional <span>no te alcanz
 highlights:
   - image: /images/uploads/que-es-ayurveda/highlight-1.jpg
     linkUrl: /images/uploads/que-es-ayurveda/test-doshas.pdf
-    linkText: Conocé tus doshas
+    linkText: Descargar tests de doshas
   - image: /images/uploads/que-es-ayurveda/highlight-2.jpg
     linkUrl: /sobre-mi#mi-enfoque
     linkText: Conocé más sobre mí práctica médica

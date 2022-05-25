@@ -1,7 +1,6 @@
 ---
 pageTitle: Cursos y talleres
 heroDesktopImage: /images/uploads/bg/courses-desktop.jpg
-heroMobileImage: /images/uploads/bg/courses-mobile.jpg
 heroTitle: Cursos y talleres
 alimentationCourse:
   - image: /images/uploads/courses/alimentation.jpg
@@ -23,7 +22,7 @@ formationCourse:
   - image: /images/uploads/courses/formation.jpg
     title: Formación Ayurveda <br/><span>cuerpo-mente</span>
     alignment: derecha
-    text: Una formación que brindo junto a la Dra. Mercedes Bertuzzi (médica psiquiatra UBA), donde integramos saberes ancestrales del Ayurveda con conceptos modernos, para que puedas aplicarlo de una forma sencilla en tu vida cotidiana o con tus pacientes si sos personal de salud.<br />Inicia en ABRIL y SEPTIEMBRE de cada año. Es un curso online de 3 meses de duración.
+    text: Una formación que brindo junto a la Dra. Mercedes Bertuzzi (médica psiquiatra UBA), donde integramos saberes ancestrales del Ayurveda con conceptos modernos, para que puedas aplicarlo de una forma sencilla en tu vida cotidiana o con tus pacientes si sos personal de salud.<br />Inicia en ABRIL y SEPTIEMBRE de cada año. Es un curso online de 3 meses de duración. Consultas a <a href="mailto:ayurveda.cuerpomente@gmail.com" class="font-semibold">ayurveda.cuerpomente@gmail.com</a>
     features:
       - featureText: Videos + material de lectura en formato PDF que se suben a una plataforma online para que puedas verlos a tu ritmo.
       - featureText: Foro donde compartimos dudas, experiencias y resonancias.

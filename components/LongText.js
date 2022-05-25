@@ -1,7 +1,7 @@
 // Styles
 import styles from './LongText.module.css';
 
-export default function LongText({ id, content, title, topPadding, bottomPadding }) {
+export default function LongText({ id, content, title, topPadding, bottomPadding, classes }) {
   return (
     <article
       className={`
@@ -9,6 +9,7 @@ export default function LongText({ id, content, title, topPadding, bottomPadding
         ${topPadding}
         ${bottomPadding}
         px-4 md:px-12
+        ${classes ? classes : ''}
       `}
       id={id ? id : undefined}
     >

@@ -50,6 +50,7 @@ export default function Turnos({ turnosData }) {
         titles={titles}
         content={content}
       />
+      <span id="solicitar-turno" />
       <Contact
         title={contactTitle}
         text={contactText}

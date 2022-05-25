@@ -26,7 +26,7 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
           src={desktopImage}
           layout="fill"
           objectFit="cover"
-          alt="Foto de Vicky sentada en unos escalones de piedra"
+          alt={title}
           priority
           objectPosition={position ? position : undefined}
         />
@@ -40,7 +40,8 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
             src={mobileImage}
             layout="fill"
             objectFit="cover"
-            alt="Foto de Vicky sentada en unos escalones de piedra"
+            alt={title}
+            objectPosition={position ? position : undefined}
             priority
           />
         </div>

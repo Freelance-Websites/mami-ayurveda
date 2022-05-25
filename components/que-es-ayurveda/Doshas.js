@@ -38,7 +38,7 @@ export default function Doshas({ title, text, doshas }) {
             key={index}
             className="
               bg-white shadow-lg
-              py-24
+              py-8 md:py-24
             "
           >
             <Image
