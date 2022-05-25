@@ -138,7 +138,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Inicio
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -152,7 +152,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/que-es-ayurveda"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               ¿Qu&eacute; es Ayurveda?
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -166,7 +166,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/sobre-mi"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Sobre m&iacute;
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -180,7 +180,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/sobre-mi#my-practice"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Mi enfoque m&eacute;dico
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -194,7 +194,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/cursos-y-talleres"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Cursos y talleres
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -208,7 +208,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/ebooks"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               E-books
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -222,7 +222,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/turnos#preguntas-frecuentes"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Preguntas frecuentes
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -236,7 +236,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/turnos#solicitar-turno"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Turnos
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
@@ -250,7 +250,7 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
             href="/contacto"
           >
             <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-6xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
             >
               Contacto
               <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
