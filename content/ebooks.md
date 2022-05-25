@@ -6,7 +6,7 @@ heroTitle: E-books
 heroDescription: Estos ebooks fueron creados para entregar a mis pacientes, para que puedan repasar todo lo aprendido en la consulta. Podés acceder a ellos por un precio muy accesible y me ayudás a seguir generando contenido en las redes.
 heroCtaText: Conocé más
 heroCtaLink: '#details'
-ebooksTitle: Cursos y <span>Talleres</span>
+ebooksTitle: Descargá mis <span>E-books</span>
 ebooksText: Una vez que abonas desde el link de pago, te llega a tu mail dentro de las próximas 24 hs hábiles.
 ebooksList:
   - image: /images/uploads/ebooks/ebook-1.jpg
