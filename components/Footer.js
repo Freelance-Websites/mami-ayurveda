@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ page }) {
   return (
     <footer
       className="
@@ -6,7 +6,10 @@ export default function Footer() {
       "
     >
       <div
-        className="flex items-center flex-col text-center md:text-left md:flex-row md:justify-between"
+        className={`
+          flex items-center flex-col text-center md:text-left md:flex-row
+          ${page === 'contact' ? 'md:justify-center' : 'md:justify-between'}
+        `}
       >
         <p
           className="uppercase text-xs font-semibold tracking-widest text-white/80"

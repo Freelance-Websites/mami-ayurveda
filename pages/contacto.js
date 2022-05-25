@@ -38,7 +38,7 @@ export default function Contact() {
         {/* Form */}
         <Form title={heroTitle} />
       </section>
-      <Footer />
+      <Footer page="contact" />
     </Base>
   )
 }

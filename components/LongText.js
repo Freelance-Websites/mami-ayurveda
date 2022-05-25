@@ -25,6 +25,7 @@ export default function LongText({ id, content, title, topPadding, bottomPadding
         dangerouslySetInnerHTML={{ __html: content }}
         className={styles.Text}
       />
+      <span id="mi-enfoque" />
     </article>
   );
 }
