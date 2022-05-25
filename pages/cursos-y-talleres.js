@@ -2,7 +2,6 @@
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import CardsContainer from '../components/cards/Container';
-import Features from '../components/cards/Features';
 import Contact from '../components/Contact';
 
 // Content
@@ -49,9 +48,6 @@ export default function Courses() {
         <CardsContainer
           content={formationCourse}
           type="side-by-side"
-        />
-        <Features
-          features={formationCourse[0].features}
         />
       </section>
       <Contact

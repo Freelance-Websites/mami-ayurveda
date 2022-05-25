@@ -25,12 +25,9 @@ formationCourse:
     alignment: derecha
     text: Una formación que brindo junto a la Dra. Mercedes Bertuzzi (médica psiquiatra UBA), donde integramos saberes ancestrales del Ayurveda con conceptos modernos, para que puedas aplicarlo de una forma sencilla en tu vida cotidiana o con tus pacientes si sos personal de salud.<br />Inicia en ABRIL y SEPTIEMBRE de cada año. Es un curso online de 3 meses de duración.
     features:
-      - featureTitle: 9 módulos de contenido
-        featureText: Videos + material de lectura en formato PDF que se suben semana a semana a una plataforma online para que puedas verlos a tu ritmo.
-      - featureTitle: Foro
-        featureText: Donde compartimos dudas, experiencias y resonancias.
-      - featureTitle: 3 encuentros via Zoom
-        featureText: Uno por mes donde respondemos dudas, veremos casos clínicos y mucho más.<br />Los encuentros quedan grabados por si no puedes participar en vivo.
+      - featureText: Videos + material de lectura en formato PDF que se suben a una plataforma online para que puedas verlos a tu ritmo.
+      - featureText: Foro donde compartimos dudas, experiencias y resonancias.
+      - featureText: 3 encuentros via zoom donde respondemos dudas, veremos casos clínicos y mucho más. Los encuentros quedan grabados por si no puedes participar en vivo.
     ctas:
       - ctaText: Descargar temario
         ctaUrl: mailto:ayurveda.cuerpomente@gmail.com?subject=Solicitud de temario para formación Ayurveda cuerpo-mente
