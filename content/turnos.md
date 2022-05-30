@@ -18,6 +18,8 @@ Vemos los  antecedentes de salud, realizamos el diagnóstico de la constitución
 
 Armamos un plan integral de equilibrio único y personalizado que incluye alimentación, rutinas diarias, tratamientos naturales en caso que lo requieras. Acompañando la crianza de una forma respetuosa.
 
+>
+
 ## Adultxs
 
 ![Quiénes pueden atenderse: Adultxs](/images/uploads/turnos/quien-puede-atenderse-adultxs.jpg)
@@ -26,6 +28,8 @@ Vemos tus antecedentes de salud, realizamos el diagnóstico de tu constitución 
 
 Armamos un plan integral de equilibrio único y personalizado que incluye alimentación, rutinas diarias, tratamientos naturales con plantas medicinales en caso que lo requieras.
 
+>
+
 ## Familias
 
 ![Quiénes pueden atenderse: Familias](/images/uploads/turnos/quien-puede-atenderse-familias.jpg)
@@ -33,6 +37,8 @@ Armamos un plan integral de equilibrio único y personalizado que incluye alimen
 Un encuentro donde vemos los hábitos familiares, charlamos sobre alimentación, rutinas diarias, como aplicar Ayurveda de una forma práctica y sencilla en lo cotidiano.
 
 Acompaño familias vegetarianas y veganas para asegurar el aporte de todos los nutrientes.
+
+>
 
 ## Embarazadas (consulta prenatal)
 
@@ -43,6 +49,8 @@ Es un encuentro entre los futuros papás y el pediatra para sentar las bases del
 Todo lo que ocurra durante la gestación (tu alimentación, tus emociones...) van a dejar una impronta sobre la constitución (prakriti) de tu bebé.
 
 La consulta prenatal con orientación ayurvédica es para que atravieses el embarazo de forma consciente (charlamos de alimentación, rutinas diarias...), vemos tus antecedentes abordando posibles desequilibrios desde una mirada integral.
+
+>
 
 Los objetivos de la consulta son:
 
