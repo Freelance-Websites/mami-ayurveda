@@ -29,7 +29,7 @@ formationCourse:
       - featureText: 3 encuentros via zoom donde respondemos dudas, veremos casos clínicos y mucho más. Los encuentros quedan grabados por si no puedes participar en vivo.
     ctas:
       - ctaText: Descargar temario
-        ctaUrl: mailto:ayurveda.cuerpomente@gmail.com?subject=Solicitud de temario para formación Ayurveda cuerpo-mente
+        ctaUrl: /images/uploads/courses/formacion-ayurveda-cuerpo-mente.pdf
 contactTitle: Todo gran cambio empieza por un pequeño paso, ¿te animás?
 contactFormTitle: Dejame tu consulta
 contactCTAs:
