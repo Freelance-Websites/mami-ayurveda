@@ -44,7 +44,8 @@ export default function Turnos({ turnosData }) {
         desktopImage={heroDesktopImage}
         mobileImage={heroMobileImage}
         showForm={false}
-        position="top"
+        position="center"
+        page="turnos"
       />
       <Panels
         titles={titles}

@@ -7,7 +7,7 @@ import Button from './forms/Button';
 import Input from './forms/Input';
 import Select from './forms/Select';
 
-export default function Hero({ title, text, cta, desktopImage, mobileImage, showForm, position }) {
+export default function Hero({ title, text, cta, desktopImage, mobileImage, showForm, position, page }) {
   return (
     <section
       className="
@@ -53,7 +53,7 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
       {/* Text */}
       <article
         className={`
-          ${showForm === false ? 'pt-16 md:pt-24 lg:pt-32 xl:pt-44' : 'md:grid-cols-2'}
+          ${showForm === false ? `pt-16 md:pt-24 lg:pt-32 ${page === 'turnos' ? 'xl:pt-72' : 'xl:pt-44'}` : 'md:grid-cols-2'}
           container mx-auto relative grid grid-cols-1
         `}
       >
