@@ -124,12 +124,12 @@ export function Form() {
       </h2>
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
-        name="appointments"
+        name="appointments-home"
         data-netlify="true"
         method="POST"
       >
         {/* Netlify stuff */}
-        <input type="hidden" name="form-name" value="appointments" />
+        <input type="hidden" name="form-name" value="appointments-home" />
         <p className="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
