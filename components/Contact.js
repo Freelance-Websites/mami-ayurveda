@@ -163,13 +163,27 @@ export function ContactForm({ title }) {
 
 export function AppointmentsForm() {
   const [activeType, setActiveType] = useState('online');
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    const form = e.target.parentElement;
+    let formData = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => form.submit())
+      .catch((error) => console.log(error));
+  }
+
   return (
     <form
       className="grid grid-cols-1 md:grid-cols-2 gap-4"
       name="appointments"
       data-netlify="true"
       method="POST"
-      action={activeType === 'online' ? 'https://calendly.com/dravictoriagallo-ayurveda/' : '/exito'}
+      action={activeType === 'online' ? 'https://calendly.com/dravictoriagallo-ayurveda/' : '/api/exito'}
     >
       {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="appointments" />
@@ -263,6 +277,7 @@ export function AppointmentsForm() {
           text: 'Reservar turno',
           icon: true,
           classes: "col-span-full justify-end",
+          action: (e) => submitForm(e),
         }}
       />
     </form>
