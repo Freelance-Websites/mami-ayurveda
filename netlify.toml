@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/exito"
+  to = "/exito"
+  status = 301
+  force = false
