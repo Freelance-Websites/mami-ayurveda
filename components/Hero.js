@@ -1,6 +1,5 @@
 // Globals
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 // Components
@@ -85,10 +84,8 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
 
 export function Form() {
   const [activeType, setActiveType] = useState('online');
-  const router = useRouter();
 
   const formCTA = {
-    action: (e) => submitForm(e),
     text: 'Reservar',
     isExternal: false,
     isButton: true,
@@ -96,17 +93,6 @@ export function Form() {
     classes: 'mb-2 justify-self-start px-6',
     icon: true,
   };
-
-  const submitForm = (e) => {
-    e.preventDefault();
-    e.target.parentElement.submit;
-
-    if(activeType === 'online') {
-      router.push('https://calendly.com/dravictoriagallo-ayurveda/');
-    } else {
-      router.push('/exito');
-    }
-  }
 
   return (
     <div
@@ -124,12 +110,13 @@ export function Form() {
       </h2>
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
-        name="appointments-home"
+        name="appointments"
         data-netlify="true"
         method="POST"
+        action={activeType === 'online' ? 'https://calendly.com/dravictoriagallo-ayurveda/' : '/exito'}
       >
         {/* Netlify stuff */}
-        <input type="hidden" name="form-name" value="appointments-home" />
+        <input type="hidden" name="form-name" value="appointments" />
         <p className="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
