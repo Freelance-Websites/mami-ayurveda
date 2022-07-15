@@ -83,10 +83,7 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
 }
 
 export function Form() {
-  const [activeType, setActiveType] = useState('online');
-
   const formCTA = {
-    action: (e) => submitForm(e),
     text: 'Reservar',
     isExternal: false,
     isButton: true,
@@ -94,19 +91,6 @@ export function Form() {
     classes: 'mb-2 justify-self-start px-6',
     icon: true,
   };
-
-  const submitForm = (e) => {
-    e.preventDefault();
-    const form = e.target.parentElement;
-    let formData = new FormData(form);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => form.submit())
-      .catch((error) => console.log(error));
-  }
 
   return (
     <div
@@ -127,7 +111,7 @@ export function Form() {
         name="appointments"
         data-netlify="true"
         method="POST"
-        action={activeType === 'online' ? 'https://calendly.com/dravictoriagallo-ayurveda/' : '/api/exito'}
+        action="/exito"
       >
         {/* Netlify stuff */}
         <input type="hidden" name="form-name" value="appointments" />
