@@ -92,6 +92,6 @@ Una vez que reservas tu turno, te pido que envíes el comprobante de pago al men
 
 ## ¿Cuáles son los días y horarios de atención?
 
-ONLNIE: Lunes, miércoles, jueves y viernes por la mañana/ Viernes por la tarde.
+ONLINE: Lunes, miércoles, jueves y viernes por la mañana/ Viernes por la tarde.
 
 P﻿RESENCIAL: Miercoles por la mañana / Viernes por la mañana y por la tarde.
