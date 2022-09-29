@@ -15,7 +15,7 @@ alimentationCourse:
           durante 3 meses.
     ctas:
       - ctaText: Comprar curso
-        ctaUrl: https://mpago.la/19eeQZ4
+        ctaUrl: https://mpago.la/154wfJp
       - ctaText: Ver temario
         ctaUrl: /images/uploads/courses/taller-alimentacion-ayur-informacion.pdf
 formationCourse:
