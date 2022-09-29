@@ -468,6 +468,7 @@ collections:
               label: "Imagen mobile encabezado",
               name: "heroMobileImage",
               widget: "image",
+              required: false,
               hint: "La imagen que se muestra en el encabezado de la página, en la resolución mobile",
             }
           - {
@@ -510,7 +511,7 @@ collections:
                  max: 2
                  fields:
                    - { label: "Texto", name: "ctaText", widget: "string", hint: "El texto del botón" }
-                   - { label: "URL", name: "ctaUrl", widget: "string", hint: "El link del botón" }
+                   - { label: "Archivo", name: "ctaUrl", widget: "file", default: "/images/uploads/courses/taller-alimentacion-ayur-informacion.pdf" hint: "El PDF al que linkea el botón" }
           - label: "Taller formación Ayurveda cuerpo-mente"
             name: "formationCourse"
             widget: "list"
@@ -545,7 +546,7 @@ collections:
                  max: 2
                  fields:
                    - { label: "Texto", name: "ctaText", widget: "string", hint: "El texto del botón" }
-                   - { label: "URL", name: "ctaUrl", widget: "string", hint: "El link del botón" }
+                   - { label: "Archivo", name: "ctaUrl", widget: "file", default: "/images/uploads/courses/formacion-ayurveda-cuerpo-mente.pdf" hint: "El PDF al que linkea el botón" }
           - {
               label: "Título contacto",
               name: "contactTitle",
