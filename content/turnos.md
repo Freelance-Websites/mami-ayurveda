@@ -66,7 +66,7 @@ Propongo consultas de una hora de duración, donde vas a poder sacarte todas tus
 
 Consulta online vía zoom de 1 hora de duración. 
 
-#### Valor: $4000.
+#### Valor: $6000.
 
 ### 🍂 Modalidad presencial:
 
@@ -80,7 +80,7 @@ Realización de apto físico para el cole o gimnasio.
 
 Presencial en mi consultorio (Boulogne, San Isidro, zona norte, Buenos Aires).
 
-#### Valor: $5000.
+#### Valor: $7500.
 
 ## ¿Cuáles son las formas de pago?
 
