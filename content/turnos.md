@@ -64,13 +64,13 @@ Propongo consultas de una hora de duración, donde vas a poder sacarte todas tus
 
 ### 🌿 Modalidad online:
 
-Consulta online vía zoom de 1 hora de duración. 
+Consulta online (google meet) de 1 hora de duración.
 
-#### Valor: $7.500
+#### Valor: $30.000
 
 ### 🍂 Modalidad presencial:
 
-Encuentro de 1 hora de duración.
+Luego de realizar la primera consulta online, podés optar por hacer una consulta presencial de seguimiento (encuentro de media hora)
 
 Realizamos una revisación completa (control de peso, talla, tensión arterial). 
 
@@ -80,7 +80,13 @@ Realización de apto físico para el cole o gimnasio.
 
 Presencial en mi consultorio (Boulogne, San Isidro, zona norte, Buenos Aires).
 
-#### Valor: $9.500
+#### Valor: $20.000
+
+T﻿ambién podés optar por continuar con el seguimiento ONLINE. 
+
+E﻿ncuentro online de seguimiento de 30 minutos
+
+#### Valor: $17.000
 
 ## ¿Cuáles son las formas de pago?
 
@@ -92,6 +98,6 @@ Una vez que reservas tu turno, te pido que envíes el comprobante de pago al men
 
 ## ¿Cuáles son los días y horarios de atención?
 
-ONLINE: Lunes, miércoles, jueves y viernes por la mañana/ Viernes por la tarde.
+ONLINE: Lunes, martes, jueves o viernes POR LA MAÑANA / Miercoles, jueves o viernes POR LA TARDE. A coordinar.
 
-P﻿RESENCIAL: Miercoles por la mañana / Viernes por la mañana y por la tarde.
+P﻿RESENCIAL: Viernes por la tarde
