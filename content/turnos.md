@@ -58,35 +58,20 @@ Los objetivos de la consulta son:
 
 ## ¿Cuál es la duración de la consulta?
 
-Propongo consultas de una hora de duración, donde vas a poder sacarte todas tus dudas.
+L﻿a primera consulta tiene una duración de una hora. Las consultas de seguimiento suelen ser más breves, variando de 30 a 45 mins aprox.
 
 ## ¿Cuáles son las modalidades y valores de atención?
 
-### 🌿 Modalidad online:
+La primera consulta es ONLINE vía google meet, su extensión es de 1 hora. 
 
-Consulta online (google meet) de 1 hora de duración. 
+**$60.000  / 60 usd.**
 
-#### Valor: $45.000
 
-### 🍂 Modalidad presencial:
+Para los controles de seguimiento podés optar por modalidad online o presencial en mi consultorio de San Isidro (viernes).
 
-Luego de realizar la primera consulta online, podés optar por hacer una consulta presencial de seguimiento (encuentro de media hora)
+O﻿NLINE: **$32.000**
 
-Realizamos una revisación completa (control de peso, talla, tensión arterial). 
-
-Examen ayurvédico de la lengua y pulso. Técnicas de automasaje. 
-
-Realización de apto físico para el cole o gimnasio.
-
-Presencial en mi consultorio (Boulogne, San Isidro, zona norte, Buenos Aires).
-
-#### Valor: $30.000
-
-T﻿ambién podés optar por continuar con el seguimiento ONLINE. 
-
-E﻿ncuentro online de seguimiento de 30 minutos
-
-#### Valor: $25.000
+P﻿RSENCIAL: **$42.000**
 
 ## ¿Cuáles son las formas de pago?
 
