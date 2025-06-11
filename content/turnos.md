@@ -83,6 +83,6 @@ Una vez que reservas tu turno, te pido que envíes el comprobante de pago al men
 
 ## ¿Cuáles son los días y horarios de atención?
 
-ONLINE: Lunes, martes, jueves o viernes POR LA MAÑANA / Miercoles, jueves o viernes POR LA TARDE. A coordinar.
+ONLINE: Lunes a  viernes POR LA MAÑANA / Miércoles, jueves o viernes POR LA TARDE. A coordinar.
 
-P﻿RESENCIAL: Viernes por la tarde
+P﻿RESENCIAL: Viernes por la mañana y por la tarde.
