@@ -9,6 +9,12 @@ heroCtaLink: '#details'
 ebooksTitle: Descargá mis <span>E-books</span>
 ebooksText: Una vez que abonas desde el link de pago, te llega a tu mail dentro de las próximas 24 hs hábiles.
 ebooksList:
+  - image: /images/uploads/ebooks/ebook-0.jpg
+    icon: /images/uploads/icons/ebooks/ebook-0.svg
+    title: Guía de tratamientos naturales en la infancia
+    text: "Combinando los conocimientos de la pediatría moderna y el Ayurveda, en esta guía te cuento los desequilibrios más frecuentes en la infancia, sus tratamientos naturales y pautas de alarma para consultar por guardia. 55 paginas donde encontrás los tratamientos naturales para fiebre, mocos, tos, dolor de panza, dermatitis y muchos más."
+    linkUrl: https://linktr.ee/mami.ayurveda
+    linkText: Comprar
   - image: /images/uploads/ebooks/ebook-1.jpg
     icon: /images/uploads/icons/ebooks/ebook-1.svg
     title: Introducción al Ayurveda
