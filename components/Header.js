@@ -68,6 +68,20 @@ export default function Header() {
           >
             <li className="hidden md:block">
               <Link
+                href="/membresia"
+              >
+                <a
+                  className={`
+                    ${router.asPath === '/membresia' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
+                    uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
+                  `}
+                >
+                  Membres&iacute;a
+                </a>
+              </Link>
+            </li>
+            <li className="hidden md:block">
+              <Link
                 href="/ebooks"
               >
                 <a
