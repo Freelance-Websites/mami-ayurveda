@@ -31,13 +31,10 @@ highlights:
       precio muy accesible y me ayudás a seguir generando contenido en las
       redes.
     linkUrl: /ebooks
-  - image: /images/uploads/homepage/highlight-2.jpg
-    title: "Curso: Formación Ayurveda cuerpo-mente"
-    text: Una formación que brindo junto a la Dra. Mercedes Bertuzzi (médica
-      psiquiatra UBA), donde integramos saberes ancestrales del Ayurveda con
-      conceptos modernos, para que puedas aplicarlo de una forma sencilla en tu
-      vida cotidiana o con tus pacientes si sos personal de salud.
-    linkUrl: /cursos-y-talleres#formacion-ayurveda-cuerpo-mente
+  - image: /images/uploads/bg/membresia-desktop.jpg
+    title: "Membresía Pediatría natural integrativa"
+    text: Una red de mamás y papás que buscan abordar la salud de sus hijos de manera integral y a través de tratamientos naturales. Si consideras que la medicina convencional hace un uso excesivo de medicación y que no toma en cuenta las características individuales de tu hijo o hija, este espacio es para vos.
+    linkUrl: /membresia
   - image: /images/uploads/courses/alimentation.jpg
     title: "Curso: Taller alimentación familiar Ayur"
     text: Un Taller dónde aprenderás las bases de la alimentación Ayurvédica y
