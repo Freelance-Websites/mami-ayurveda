@@ -211,6 +211,20 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
+            href="/membresia"
+          >
+            <a
+              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
+            >
+              Membres&iacute;a
+              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+              </span>
+            </a>
+          </Link>
+        </li>
+        <li className="group md:mb-4 flex items-center justify-center">
+          <Link
             href="/cursos-y-talleres"
           >
             <a
