@@ -1,25 +1,26 @@
 ---
 pageTitle: Membresía "Raices de amor"
-heroDesktopImage: /images/uploads/bg/courses-desktop.jpg
-heroTitle: Raíces de Amor
+heroDesktopImage: /images/uploads/bg/membresia-desktop.jpg
+heroMobileImage: /images/uploads/bg/membresia-mobile.jpg
+heroTitle: Membresía Pediatría natural integrativa
 heroDescription: "Una red de mamás y papás que buscan abordar la salud de sus hijos de manera integral y a través de tratamientos naturales. Si consideras que la medicina convencional hace un uso excesivo de medicación y que no toma en cuenta las características individuales de tu hijo o hija, este espacio es para vos."
 heroCtaOneText: Suscribite ahora
 heroCtaOneLink: "https://klouser.app/group/raices-de-amor"
 heroCtaTwoText: Conocé más
 heroCtaTwoLink: "#about"
-aboutContent: <p>Bienvenid@s a Raíces de Amor 🌱</p><p>Una red de mamás y papás que buscan abordar la salud de sus hijos de manera integral y a través de tratamientos naturales❤️</p><p>Las raíces dan sostén.</p><p>Las raíces nutren.</p><p>✨</p><p>Si consideras que la medicina convencional hace un uso excesivo de medicación y que no toma en cuenta las características individuales de tu hijo o hija, este espacio es para vos 🤸</p><p>Te invito a conocerte, a escucharte, a vos, a tus hijos e hijas, a toda tu familia.</p><p>Formar parte de esta membresía te dará herramientas para abordar tu salud y la de tu familia de una forma integral, teniendo en cuenta cuerpo, mente y espíritu, a través de herramientas naturales, y minimizar el uso de medicación💊sólo cuando sea realmente necesaria.</p>
+aboutContent: <p>¿Como funciona la membresía Raíces de Amor?</p><p>Es una plataforma online donde semana a semana te comparto un artículo nuevo exclusivo sobre tratamientos naturales para la familia.</p><p>Todo queda organizado en una BIBLIOTECA por categoría.</p><p>Incluye audios, recetarios de tratamientos naturales y listas de compras para descargar, videos para que puedas aprender de forma clara y sencilla.</p><p>Además acceso a un grupo de telegram para consultar dudas y compartir en comunidad, con mi acompañamiento y guía continua.</p><p>¿Te gustaría sumarte pero sentis que no tenes tiempo?</p><p>Tranquila, el contenido está pensado para mamás como vos (y como yo) para que puedas encontrar fácilmente lo que necesitas en cada momento y puedas leerlo en NO más de 15 mins😅</p><p>"Sin acción no hay transformación"</p>
 aboutMeContent:
-  - image: /images/uploads/bg/turnos-desktop.jpg
+  - image: /images/uploads/bg/sobre-mi.jpg
     title: Conocé más sobre mí
     alignment: izquierda
     text: "Soy Victoria Gallo, médica pediatra formada en la Universidad de Buenos Aires. Mamá de dos pequeños maestros. Yo también estuve en TU lugar. <br />Un día comencé a sentir que la medicina convencional no me resonaba, porque propone tratamientos generales, sin tener en cuenta las características únicas y específicas de cada persona, haciendo foco solo en lo físico, poniendo parches, sin tratar el problema de raíz. Por eso me formé en medicina Ayurveda y fitomedicina."
     ctas:
-      - ctaText: Más sobre la suscripción
+      - ctaText: Conocé más
         ctaUrl: "https://klouser.app/group/raices-de-amor"
-      - ctaText: Conocé más sobre mí
+      - ctaText: Sobre mí
         ctaUrl: /sobre-mi
 ctaHeading: "Si resonaste con esto te invito a que te sumes. <br />Conocé más sobre la suscripción acá:"
-ctaText: Membresía "Raíces de amor"
+ctaText: Conocé más
 ctaLink: https://klouser.app/group/raices-de-amor
 contactTitle: Todo gran cambio empieza por un pequeño paso, ¿te animás?
 contactFormTitle: Dejame tu consulta
