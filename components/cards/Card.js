@@ -33,7 +33,7 @@ export default function Card({ card }) {
         {card.text &&
           <p
             className={`
-              text-slate-500 mt-2 line-clamp-4 md:line-clamp-2
+              text-slate-500 mt-2
               ${card.linkText ? 'mb-4' : undefined}
             `}
           >

@@ -14,7 +14,6 @@ export default function Courses() {
     heroDesktopImage,
     heroMobileImage,
     alimentationCourse,
-    formationCourse,
     contactTitle,
     contactFormTitle,
     contactCTAs
@@ -37,19 +36,6 @@ export default function Courses() {
         "
         id="taller-alimentacion-familiar-ayur"
       />
-      <section
-        className="
-          bg-lime-50
-          relative
-          pb-8 sm:py-16 md:py-24 lg:py-32
-        "
-        id="formacion-ayurveda-cuerpo-mente"
-      >
-        <CardsContainer
-          content={formationCourse}
-          type="side-by-side"
-        />
-      </section>
       <Contact
         title={contactTitle}
         subtitle={contactFormTitle}

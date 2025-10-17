@@ -69,10 +69,16 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
               dangerouslySetInnerHTML={{ __html: text}}
             />
           }
-          {cta &&
-            <Button
-              cta={cta}
-            />
+          {Array.isArray(cta)
+            ? <div className='flex items-center gap-2 mt-4'>
+                {cta.map((item, idx) => (
+                  <Button
+                    key={idx}
+                    cta={item}
+                  />
+                ))}
+              </div>
+            : cta && <Button cta={cta} />
           }
         </div>
         {/* Form */}
