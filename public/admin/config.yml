@@ -74,6 +74,21 @@ collections:
               - { label: "Título", name: "title", widget: "string", hint: "El título de la sección" }
               - { label: "Link", name: "link", widget: "string", hint: "El link de la sección" }
           - {
+              label: "Título redes sociales",
+              name: "socialMediaTitle",
+              widget: "string",
+              hint: "El título de la sección de redes sociales",
+            }
+          - label: "Redes sociales"
+            name: "socialMedia"
+            widget: "list"
+            allow_add: true
+            hint: "Agregá todas las redes sociales que quieras mostrar"
+            fields:
+              - { label: "Plataforma", name: "platform", widget: "select", options: ["Instagram", "Spotify", "Youtube", "Facebook", "Twitter", "LinkedIn", "TikTok", "WhatsApp", "Pinterest"], hint: "La plataforma de red social" }
+              - { label: "Texto", name: "text", widget: "string", hint: "El texto que se muestra debajo del ícono" }
+              - { label: "URL", name: "url", widget: "string", hint: "El enlace a la red social" }
+          - {
               label: "Título destacados",
               name: "highlightsTitle",
               widget: "string",
