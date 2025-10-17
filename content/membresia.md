@@ -20,6 +20,8 @@ aboutMeContent:
       - ctaText: Sobre mí
         ctaUrl: /sobre-mi
 ctaHeading: "Si resonaste con esto te invito a que te sumes. <br />Conocé más sobre la suscripción acá:"
+ctaDesktopImage: /images/uploads/bg/membresia-desktop.jpg
+ctaMobileImage: /images/uploads/bg/membresia-mobile.jpg
 ctaText: Conocé más
 ctaLink: https://klouser.app/group/raices-de-amor
 contactTitle: Todo gran cambio empieza por un pequeño paso, ¿te animás?

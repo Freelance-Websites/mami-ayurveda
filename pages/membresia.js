@@ -23,6 +23,8 @@ export default function Membership() {
     aboutContent,
     aboutMeContent,
     ctaHeading,
+    ctaDesktopImage,
+    ctaMobileImage,
     ctaText,
     ctaLink,
     contactTitle,
@@ -62,22 +64,21 @@ export default function Membership() {
         bottomPadding="pb-8 sm:pb-16 md:pb-24 lg:pb-32"
         classes="scroll-mt-12"
       />
-      <section className='bg-slate-50 pt-4 sm:pt-12 md:pt-16 pb-8 sm:pb-16 md:pb-24 lg:pb-48'>
+      <CTA
+        heading={ctaHeading}
+        desktopImage={ctaDesktopImage}
+        mobileImage={ctaMobileImage}
+        cta={{
+          text: ctaText,
+          link: ctaLink,
+          theme: 'solid',
+          isExternal: true
+        }}
+      />
+      <section className='bg-slate-50 pt-8 sm:pt-12 md:-pt-16 lg:pt-24 pb-8 sm:pb-16 md:pb-24 lg:pb-32'>
         <CardsContainer
           content={aboutMeContent}
           type="side-by-side"
-        />
-      </section>
-      <section className='relative'>
-        <CTA
-          heading={ctaHeading}
-          cta={{
-            text: ctaText,
-            link: ctaLink,
-            theme: 'solid',
-            isExternal: true
-          }}
-          classes="md:absolute md:left-1/2 md:top-0 md:-translate-x-1/2 md:-translate-y-1/2"
         />
       </section>
       <Contact

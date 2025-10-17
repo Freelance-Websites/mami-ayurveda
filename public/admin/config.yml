@@ -421,6 +421,67 @@ collections:
               required: false,
               hint: "Podés usar HTML en este campo",
             }
+          - label: "Información sobre mí"
+            name: "aboutContent"
+            widget: "text"
+            required: false
+            hint: "Contenido adicional sobre la membresía. Podés usar HTML en este campo"
+          - label: "Cards sobre mí"
+            name: "aboutMeCards"
+            widget: "list"
+            allow_add: true
+            required: false
+            hint: "Tarjetas con información adicional"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta" }
+              - { label: "Alineación", name: "alignment", widget: "select", options: ["izquierda", "derecha"], hint: "La alineación de la tarjeta" }
+              - { label: "Texto", name: "text", widget: "text", hint: "El texto de la tarjeta. Podés usar HTML en este campo." }
+              - label: "CTAs"
+                name: "ctas"
+                widget: "list"
+                hint: "Los botones de la tarjeta"
+                allow_add: true
+                required: false
+                max: 2
+                fields:
+                  - { label: "Texto", name: "ctaText", widget: "string", hint: "El texto del botón" }
+                  - { label: "URL", name: "ctaUrl", widget: "string", hint: "El link del botón" }
+          - {
+              label: "Título CTA",
+              name: "ctaHeading",
+              widget: "string",
+              hint: "El título del CTA. Podés usar HTML en este campo",
+              required: false
+            }
+          - {
+              label: "Imagen escritorio CTA",
+              name: "ctaDesktopImage",
+              widget: "image",
+              hint: "La imagen de fondo para el CTA en escritorio",
+              required: false
+            }
+          - {
+              label: "Imagen mobile CTA",
+              name: "ctaMobileImage",
+              widget: "image",
+              required: false,
+              hint: "La imagen de fondo para el CTA en dispositivos móviles",
+            }
+          - {
+              label: "Texto del botón CTA",
+              name: "ctaText",
+              widget: "string",
+              hint: "El texto del botón del CTA",
+              required: false
+            }
+          - {
+              label: "Link del botón CTA",
+              name: "ctaLink",
+              widget: "string",
+              hint: "El link del botón del CTA",
+              required: false
+            }
           - {
               label: "Título contacto",
               name: "contactTitle",
