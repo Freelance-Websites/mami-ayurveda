@@ -17,8 +17,8 @@ sections:
     title: E-books
     link: /ebooks
   - image: /images/uploads/icons/homepage-section-3.svg
-    title: Cursos y talleres
-    link: /cursos-y-talleres
+    title: Membresía "Raices de amor"
+    link: /membresia
   - image: /images/uploads/icons/homepage-section-4.svg
     title: Sacá un turno
     link: /turnos

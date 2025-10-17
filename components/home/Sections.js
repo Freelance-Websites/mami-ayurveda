@@ -42,14 +42,15 @@ export default function Sections({ title, sections }) {
                   src={section.image}
                   alt={section.title}
                   layout="fixed"
-                  width={84}
-                  height={72}
-                  className="mix-blend-multiply"
+                  width={index === 2 ? 72 : 84}
+                  height={index === 2 ? 60 : 72}
+                  className='mix-blend-multiply'
                 />
                 <h4
-                  className="
-                    uppercase text-orange-400 text-xs font-semibold tracking-wider mt-4 flex items-center justify-center
-                  "
+                  className={`
+                      uppercase text-orange-400 text-xs font-semibold tracking-wider mt-4 flex items-center justify-center
+                      ${index === 2 ? 'relative top-0 md:top-3' : ''}
+                    `}
                 >
                   {section.title}
                   <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current ml-1 relative -top-px">
