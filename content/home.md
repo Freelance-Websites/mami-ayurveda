@@ -24,17 +24,14 @@ sections:
     link: /turnos
 highlightsTitle: Información <span>destacada</span>
 highlights:
-  - image: /images/uploads/homepage/highlight-1.jpg
-    title: E-books
-    text: Estos ebooks fueron creados para entregar a mis pacientes, para que puedan
-      repasar todo lo aprendido en la consulta. Podés acceder a ellos por un
-      precio muy accesible y me ayudás a seguir generando contenido en las
-      redes.
-    linkUrl: /ebooks
   - image: /images/uploads/bg/membresia-desktop.jpg
     title: "Membresía Pediatría natural integrativa"
     text: Una red de mamás y papás que buscan abordar la salud de sus hijos de manera integral y a través de tratamientos naturales. Si consideras que la medicina convencional hace un uso excesivo de medicación y que no toma en cuenta las características individuales de tu hijo o hija, este espacio es para vos.
     linkUrl: /membresia
+  - image: /images/uploads/bg/turnos-desktop.jpg
+    title: "Turnos"
+    text: Servicios de consulta pediátrica integrativa ayurvédica para niños, adultos, familias y embarazadas. Atención personalizada, diagnóstico integral y tratamientos naturales. Opciones online y presenciales disponibles.
+    linkUrl: /turnos
   # - image: /images/uploads/courses/alimentation.jpg
   #   title: "Curso: Taller alimentación familiar Ayur"
   #   text: Un Taller dónde aprenderás las bases de la alimentación Ayurvédica y
