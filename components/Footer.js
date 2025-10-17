@@ -16,7 +16,7 @@ export default function Footer({ page }) {
         >
           copyright <span>{new Date().getFullYear()}</span> mami ayurveda. designed &amp; developed by
           <a
-            href="https://jmg.land"
+            href="https://juanmartingarcia.com"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-1 underline hover:no-underline"
