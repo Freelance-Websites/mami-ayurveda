@@ -22,6 +22,17 @@ sections:
   - image: /images/uploads/icons/homepage-section-4.svg
     title: Sacá un turno
     link: /turnos
+socialMediaTitle: Seguime en las redes
+socialMedia:
+  - platform: Instagram
+    text: Seguime en Instagram
+    url: https://instagram.com/mami.ayurveda
+  - platform: Spotify
+    text: Escuchá mis mantras
+    url: https://open.spotify.com/artist/5B30iHHrYJakfYe1JhaGAZ?si=E6VdEHY8Q2WLsE6eaK7wTg&nd=1
+  - platform: Youtube
+    text: Seguime en Youtube
+    url: https://www.youtube.com/channel/UCbvHSL5QWWtMB8Q5ePaS3Ww
 highlightsTitle: Información <span>destacada</span>
 highlights:
   - image: /images/uploads/bg/membresia-desktop.jpg
