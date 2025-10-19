@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <Base title={pageTitle}>
       <section
-        className="min-h-screen relative px-4 flex items-center justify-start"
+        className="min-h-screen relative px-4 flex items-center justify-center"
       >
         {/* Desktop image */}
         <Image
