@@ -75,7 +75,7 @@ export default function Ayurveda() {
           title={highlightsTitle}
           content={highlights}
           type="standard"
-          classes="top-16 md:top-32"
+          backgroundColor='bg-slate-50'
         />
       </section>
       <Contact
