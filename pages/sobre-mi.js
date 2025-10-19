@@ -11,6 +11,8 @@ import { attributes } from "../content/sobre-mi.md";
 export default function AboutMe() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroDesktopImage,
@@ -38,7 +40,7 @@ export default function AboutMe() {
   };
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}

@@ -11,6 +11,8 @@ import { attributes } from "../content/que-es-ayurveda.md";
 export default function Ayurveda() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroDesktopImage,
     heroMobileImage,
     heroTitle,
@@ -39,7 +41,7 @@ export default function Ayurveda() {
   };
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}

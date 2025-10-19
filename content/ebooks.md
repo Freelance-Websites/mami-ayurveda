@@ -13,37 +13,37 @@ ebooksList:
     icon: /images/uploads/icons/ebooks/ebook-0.svg
     title: Guía de tratamientos naturales en la infancia
     text: "Combinando los conocimientos de la pediatría moderna y el Ayurveda, en esta guía te cuento los desequilibrios más frecuentes en la infancia, sus tratamientos naturales y pautas de alarma para consultar por guardia. 55 paginas donde encontrás los tratamientos naturales para fiebre, mocos, tos, dolor de panza, dermatitis y muchos más."
-    linkUrl: https://linktr.ee/mami.ayurveda
+    linkUrl: https://mpago.la/2Rd7GPc
     linkText: Comprar
   - image: /images/uploads/ebooks/ebook-1.jpg
     icon: /images/uploads/icons/ebooks/ebook-1.svg
     title: Introducción al Ayurveda
     text: "30 páginas donde encontrarás: Teoría de los 5 elementos y sus cualidades. Concepto de Doshas. Prakriti: ¿Cómo somos?. Vikriti: ¿Cómo estamos?. Tips de armonización para cada Dosha."
-    linkUrl: https://linktr.ee/mami.ayurveda
+    linkUrl: https://mpago.la/2NELXqh
     linkText: Comprar
   - image: /images/uploads/ebooks/ebook-2.jpg
     icon: /images/uploads/icons/ebooks/ebook-2.svg
     title: Alimentación Ayurvédica
     text: 40 páginas donde aprenderás sobre sabores (sus efectos sobre el cuerpo y la mente), tips de alimentación según tu constitución, desequilibrios y estaciones del año, algunas recetas.
-    linkUrl: https://linktr.ee/mami.ayurveda
+    linkUrl: https://mpago.la/1EokBY4
     linkText: Comprar
   - image: /images/uploads/ebooks/ebook-3.jpg
     icon: /images/uploads/icons/ebooks/ebook-3.svg
     title: "Rutina diaria Ayurvédica: dinacharya"
     text: 20 páginas donde encontrarás todas las recomendaciones sobre la rutina diaria de bienestar.
-    linkUrl: https://linktr.ee/mami.ayurveda
+    linkUrl: https://mpago.la/15uFRyC
     linkText: Comprar
   - image: /images/uploads/ebooks/ebook-4.jpg
     icon: /images/uploads/icons/ebooks/ebook-4.svg
     title: Chakras en el embarazo
     text: 10 páginas donde encontrás el papel de cada chakra en el embarazo y herramientas para llevar un embarazo consciente.
-    linkUrl: https://linktr.ee/mami.ayurveda
+    linkUrl: https://mpago.la/2HkAPfM
     linkText: Comprar
   - image: /images/uploads/ebooks/ebook-5.jpg
     icon: /images/uploads/icons/ebooks/ebook-5.svg
     title: Inicio de la alimentación complementaria
     text: Guía donde encontrás:Tips de alimentación consciente en la infancia. Que alimentos puede y cuales NO puede consumir tu bebé por edad, cómo ofrecerlos.
-    linkUrl: https://linktr.ee/mami.ayurveda
+    linkUrl: https://mpago.la/1M39xrn
     linkText: Comprar
 contactTitle: Todo gran cambio empieza por un pequeño paso, ¿te animás?
 contactFormTitle: Dejame tu consulta

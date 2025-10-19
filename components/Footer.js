@@ -7,8 +7,8 @@ export default function Footer({ page }) {
     >
       <div
         className={`
-          flex items-center flex-col text-center md:text-left md:flex-row
-          ${page === 'contact' ? 'md:justify-center' : 'md:justify-between'}
+          flex items-center flex-col text-center md:text-left
+          ${page === 'contact' && 'relative md:top-8'}
         `}
       >
         <p

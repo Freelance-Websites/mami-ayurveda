@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Base from '../components/Base';
 import Hero from '../components/Hero';
 import Sections from '../components/home/Sections';
+import SocialMediaCallout from '../components/home/SocialMediaCallout';
 import CardsContainer from '../components/cards/Container';
 import Contact from '../components/Contact';
 
@@ -14,6 +15,8 @@ import { attributes } from "../content/home.md";
 export default function Home() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroCtaText,
@@ -22,6 +25,8 @@ export default function Home() {
     heroMobileImage,
     sectionsTitle,
     sections,
+    socialMediaTitle,
+    socialMedia,
     highlightsTitle,
     highlights,
     contactTitle,
@@ -46,7 +51,7 @@ export default function Home() {
 
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}
@@ -63,6 +68,11 @@ export default function Home() {
         title={highlightsTitle}
         type="standard"
         content={activeHighlights}
+        backgroundColor='bg-orange-50'
+      />
+      <SocialMediaCallout
+        title={socialMediaTitle}
+        socialMedia={socialMedia}
       />
       <Contact
         title={contactTitle}

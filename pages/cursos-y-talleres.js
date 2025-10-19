@@ -10,6 +10,8 @@ import { attributes } from "../content/cursos-y-talleres.md";
 export default function Courses() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDesktopImage,
     heroMobileImage,
@@ -20,7 +22,7 @@ export default function Courses() {
   } = attributes;
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         desktopImage={heroDesktopImage}

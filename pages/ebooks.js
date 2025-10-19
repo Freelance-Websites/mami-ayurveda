@@ -10,6 +10,8 @@ import { attributes } from "../content/ebooks.md";
 export default function Ebooks() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroCtaText,
@@ -34,7 +36,7 @@ export default function Ebooks() {
   };
 
   return (
-    <Base title={pageTitle} classes="bg-slate-50">
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription} classes="bg-slate-50">
       <Hero
         title={heroTitle}
         text={heroDescription}
