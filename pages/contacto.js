@@ -46,6 +46,33 @@ export default function Contact() {
 }
 
 export function Form({ title }) {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Add source field based on current page
+    const currentPath = window.location.pathname;
+    formData.append('source', currentPath);
+    
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxkNhcKafcfD4k5o7U8R40llpqOFf8lUPKWdKqSaruyJvaeX5Ecau7YKene-FrQs6Re/exec', {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (response.ok) {
+        // Redirect to success page
+        window.location.href = '/exito';
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+    }
+  };
+
   return (
     <div
       className="
@@ -62,18 +89,8 @@ export function Form({ title }) {
       </h2>
       <form
         className="grid grid-cols-1 gap-4"
-        name="contact"
-        data-netlify="true"
-        method="POST"
-        action="/exito"
+        onSubmit={handleSubmit}
       >
-        {/* Netlify stuff */}
-        <input type="hidden" name="form-name" value="contact" />
-        <p className="hidden">
-          <label>
-            Don’t fill this out if you’re human: <input name="bot-field" />
-          </label>
-        </p>
         <Input
           id="name"
           type="text"
