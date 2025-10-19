@@ -20,6 +20,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -138,6 +152,20 @@ collections:
               widget: "string",
               required: false,
               hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
             }
           - {
               label: "Imagen escritorio encabezado",
@@ -264,6 +292,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -373,6 +415,20 @@ collections:
               widget: "string",
               required: false,
               hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
             }
           - {
               label: "Imagen escritorio encabezado",
@@ -517,6 +573,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -616,6 +686,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -704,6 +788,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -754,6 +852,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -776,6 +888,20 @@ collections:
               widget: "string",
               required: false,
               hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
             }
           - {
               label: "Título encabezado",

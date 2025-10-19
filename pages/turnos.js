@@ -13,6 +13,8 @@ import { attributes } from "../content/turnos.md";
 export default function Turnos({ turnosData }) {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDesktopImage,
     heroMobileImage,
@@ -38,7 +40,7 @@ export default function Turnos({ turnosData }) {
   })
 
   return (
-    <Base title={pageTitle} classes="bg-slate-50">
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription} classes="bg-slate-50">
       <Hero
         title={heroTitle}
         desktopImage={heroDesktopImage}

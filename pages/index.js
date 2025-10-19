@@ -15,6 +15,8 @@ import { attributes } from "../content/home.md";
 export default function Home() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroCtaText,
@@ -49,7 +51,7 @@ export default function Home() {
 
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}

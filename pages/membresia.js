@@ -12,6 +12,8 @@ import { attributes } from "../content/membresia.md";
 export default function Membership() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroCtaOneText,
@@ -33,7 +35,7 @@ export default function Membership() {
   } = attributes;
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}

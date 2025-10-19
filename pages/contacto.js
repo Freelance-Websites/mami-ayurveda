@@ -14,12 +14,14 @@ import { attributes } from "../content/contacto.md";
 export default function Contact() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDesktopImage,
   } = attributes;
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <section
         className="min-h-screen relative px-4 flex items-center justify-center"
       >
