@@ -101,7 +101,7 @@ export default function PdfDownloadPopup({ isOpen, onClose, pdfUrl, title = "Des
             <input type="hidden" name="form-name" value="pdf-download" />
             <p className="hidden">
               <label>
-                Don't fill this out if you're human: <input name="bot-field" />
+                Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
               </label>
             </p>
 
