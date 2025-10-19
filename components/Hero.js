@@ -110,7 +110,7 @@ export function Form() {
       <h2
         className="font-serif text-white text-xl md:text-2xl mb-4"
       >
-        Reserv&aacute; un turno!
+        Reserv&aacute; tu turno!
       </h2>
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
