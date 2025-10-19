@@ -1,8 +1,21 @@
 // Globals
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Components
+import PdfDownloadPopup from '../PdfDownloadPopup';
+
 export default function Card({ card }) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+  const handlePdfClick = (e) => {
+    e.preventDefault();
+    setIsPopupOpen(true);
+  };
+
+  const isPdfDownload = card.linkUrl && card.linkUrl.includes('.pdf');
+
   const content = 
     <>
       <div
@@ -51,31 +64,50 @@ export default function Card({ card }) {
       </div>
     </>;
   return (
-    <li
-      className="
-        rounded-xl
-        border border-gray-100
-        bg-white
-      "
-    >
-      {card.linkUrl && !card.linkUrl.includes('http') && !card.linkUrl.includes('pdf') ?
-        <Link href={card.linkUrl}>
+    <>
+      <li
+        className="
+          rounded-xl
+          border border-gray-100
+          bg-white
+        "
+      >
+        {card.linkUrl && !card.linkUrl.includes('http') && !isPdfDownload ?
+          <Link href={card.linkUrl}>
+            <a
+              className="hover:opacity-90 transition ease-in-out duration-200"
+            >
+              {content}
+            </a>
+          </Link>
+        : isPdfDownload ?
+          <button
+            onClick={handlePdfClick}
+            className="hover:opacity-90 transition ease-in-out duration-200 w-full text-left"
+          >
+            {content}
+          </button>
+        :
           <a
             className="hover:opacity-90 transition ease-in-out duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={card.linkUrl}
           >
             {content}
           </a>
-        </Link>
-      :
-        <a
-          className="hover:opacity-90 transition ease-in-out duration-200"
-          target="_blank"
-          rel="noopener noreferrer"
-          href={card.linkUrl}
-        >
-          {content}
-        </a>
-      }
-    </li>
+        }
+      </li>
+
+      {/* PDF Download Popup */}
+      {isPdfDownload && (
+        <PdfDownloadPopup
+          isOpen={isPopupOpen}
+          onClose={() => setIsPopupOpen(false)}
+          pdfUrl={card.linkUrl}
+          title={card.title || "Descarga el PDF"}
+        />
+      )}
+    </>
   );
 }

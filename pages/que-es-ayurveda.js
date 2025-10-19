@@ -42,6 +42,13 @@ export default function Ayurveda() {
 
   return (
     <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
+      {/* Hidden form for Netlify to detect pdf-download form */}
+      <form name="pdf-download" data-netlify="true" style={{ display: 'none' }}>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="pdf-requested" />
+      </form>
+      
       <Hero
         title={heroTitle}
         text={heroDescription}
@@ -68,7 +75,7 @@ export default function Ayurveda() {
           type="side-by-side"
           classes="
             pt-4 sm:pt-16 md:pt-24 lg:pt-32
-            pb-0 lg:pb-16
+            pb-12 lg:pb-16
           "
         />
         <CardsContainer
