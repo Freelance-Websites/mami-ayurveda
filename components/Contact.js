@@ -77,7 +77,7 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
               >
                 <Button
                   cta={{
-                    theme: index === 0 ? 'outline' : 'transparent',
+                    theme: index === 0 ? 'solid' : 'transparent',
                     link: cta.link,
                     text: cta.text,
                     icon: index === 0 ? true : false,
