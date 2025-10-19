@@ -1,5 +1,5 @@
 // Globals
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -9,6 +9,7 @@ import Button from './forms/Button';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showCenterLogo, setShowCenterLogo] = useState(true);
   const router = useRouter();
 
   const cta = {
@@ -18,6 +19,26 @@ export default function Header() {
     isButton: false,
     theme: 'solid',
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 600) {
+        // Hide logo after scrolling past 600px
+        setShowCenterLogo(false);
+      } else {
+        // Show logo when above 600px
+        setShowCenterLogo(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -45,7 +66,9 @@ export default function Header() {
             </a>
           </Link>
           <div
-            className="flex-1 justify-center relative hidden lg:flex"
+            className={`flex-1 justify-center relative hidden lg:flex transition-all duration-300 ease-in-out ${
+              showCenterLogo ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-4 pointer-events-none'
+            }`}
           >
             <div
               className="absolute top-0"
