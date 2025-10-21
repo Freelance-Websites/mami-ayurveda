@@ -10,6 +10,7 @@ export default function CheckoutSuccess() {
   const [checkoutData, setCheckoutData] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(null);
+  const [sheetsSaved, setSheetsSaved] = useState(false);
 
   useEffect(() => {
     // Load checkout data from localStorage
@@ -36,6 +37,13 @@ export default function CheckoutSuccess() {
       sendCustomerEmail();
     }
   }, [product, checkoutData, emailSent]);
+
+  // Save to Google Sheets when product and checkout data are available
+  useEffect(() => {
+    if (product && checkoutData && !sheetsSaved) {
+      saveToGoogleSheets();
+    }
+  }, [product, checkoutData, sheetsSaved]);
 
   const sendCustomerEmail = async () => {
     try {
@@ -68,6 +76,34 @@ export default function CheckoutSuccess() {
     } catch (error) {
       console.error('Error sending email:', error);
       setEmailError(error.message);
+    }
+  };
+
+  const saveToGoogleSheets = async () => {
+    try {
+      const formData = new FormData();
+      
+      // Add all purchase data to the form
+      formData.append('name', checkoutData.name || '');
+      formData.append('email', checkoutData.email || '');
+      formData.append('phone', checkoutData.phone || '');
+      formData.append('message', `Compra: ${product.title.replace(/<[^>]*>/g, '')} - ${product.categoryDisplay} - $${product.price?.toLocaleString('es-AR')} ARS`);
+      formData.append('source', '/checkout/success');
+      formData.append('product', product.title.replace(/<[^>]*>/g, ''));
+      formData.append('category', product.category);
+      formData.append('price', product.price || '');
+      
+      // Submit to Google Sheets
+      await fetch('https://script.google.com/macros/s/AKfycbxkNhcKafcfD4k5o7U8R40llpqOFf8lUPKWdKqSaruyJvaeX5Ecau7YKene-FrQs6Re/exec', {
+        method: 'POST',
+        body: formData
+      });
+      
+      console.log('Purchase data saved to Google Sheets successfully');
+      setSheetsSaved(true);
+    } catch (error) {
+      console.error('Error saving to Google Sheets:', error);
+      // Don't block the UI if this fails
     }
   };
 
