@@ -17,7 +17,6 @@ alimentationCourse:
           durante 3 meses.
     ctas:
       - ctaText: Comprar curso
-        ctaUrl: https://mpago.la/1tTPG3Q
       - ctaText: Ver temario
         ctaUrl: /images/uploads/courses/taller-alimentacion-ayur-informacion.pdf
 contactTitle: Todo gran cambio empieza por un pequeño paso, ¿te animás?

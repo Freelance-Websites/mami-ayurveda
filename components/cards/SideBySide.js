@@ -58,23 +58,28 @@ export default function SideBySide({ card }) {
           <ol
             className="flex pt-4"
           >
-            {card.ctas.map((cta, index) =>
-              <li
-                key={index}
-              >
-                <Button
-                  cta={{
-                    isExternal: true,
-                    isButton: false,
-                    icon: index === 0 ? true : false,
-                    link: cta.ctaUrl,
-                    text: cta.ctaText,
-                    theme: index === 0 ? 'solid' : 'transparent',
-                    classes: index === 0 ? undefined : 'text-slate-500 ml-4'
-                  }}
-                />
-              </li>
-            )}
+            {card.ctas.map((cta, index) => {
+              // Check if URL is truly external (starts with http:// or https://)
+              const isExternalUrl = cta.ctaUrl && (cta.ctaUrl.startsWith('http://') || cta.ctaUrl.startsWith('https://'));
+              
+              return (
+                <li
+                  key={index}
+                >
+                  <Button
+                    cta={{
+                      isExternal: isExternalUrl,
+                      isButton: false,
+                      icon: index === 0 ? true : false,
+                      link: cta.ctaUrl,
+                      text: cta.ctaText,
+                      theme: index === 0 ? 'solid' : 'transparent',
+                      classes: index === 0 ? undefined : 'text-slate-500 ml-4'
+                    }}
+                  />
+                </li>
+              );
+            })}
           </ol>
         }
       </div>
