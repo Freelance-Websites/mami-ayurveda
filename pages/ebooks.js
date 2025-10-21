@@ -6,6 +6,7 @@ import Contact from '../components/Contact';
 
 // Content
 import { attributes } from "../content/ebooks.md";
+import { slugify } from '../lib/products';
 
 export default function Ebooks() {
   const {
@@ -25,6 +26,12 @@ export default function Ebooks() {
     contactFormTitle,
     contactCTAs
   } = attributes;
+
+  // Map ebooks to include checkout URLs
+  const ebooksWithCheckoutLinks = ebooksList.map(ebook => ({
+    ...ebook,
+    linkUrl: `/checkout/ebooks/${slugify(ebook.title)}`,
+  }));
 
   const cta = {
     link: heroCtaLink,
@@ -53,7 +60,7 @@ export default function Ebooks() {
         id="details"
       >
         <CardsContainer
-          content={ebooksList}
+          content={ebooksWithCheckoutLinks}
           type="standard"
           title={ebooksTitle}
           text={ebooksText}

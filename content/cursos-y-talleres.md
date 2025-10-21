@@ -10,6 +10,8 @@ alimentationCourse:
       conceptos claves de nutrición moderna para aplicar en tu día a día.<br
       />Es un taller online asincrónico para hacer a tu ritmo. Disponible todo
       el año, te podés sumar cuando quieras.
+    price: 10
+    courseUrl: https://classroom.google.com/ayurveda-alimentacion-familiar
     features:
       - featureText: Podrás acceder a videos, material de lectura y un foro de consultas
           durante 3 meses.

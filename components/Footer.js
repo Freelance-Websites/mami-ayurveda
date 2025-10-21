@@ -1,9 +1,10 @@
 export default function Footer({ page }) {
   return (
     <footer
-      className="
-        absolute bottom-0 p-4 w-full
-      "
+      className={`
+        ${page === 'checkout' ? 'relative bg-slate-500 px-4 py-8' : 'p-4 absolute bottom-0'}
+        w-full
+      `}
     >
       <div
         className={`

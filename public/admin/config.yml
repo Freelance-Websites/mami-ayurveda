@@ -647,10 +647,12 @@ collections:
             hint: "Podés cargar cuantas quieras."
             fields:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el destacado" }
+              - { label: "Ícono", name: "icon", widget: "image", hint: "Opcional. El ícono del ebook", required: false }
               - { label: "Título", name: "title", widget: "string", hint: "Opcional. El título del destacado", required: false }
               - { label: "Texto", name: "text", widget: "string", hint: "Opcional. El text del destacado", required: false }
-              - { label: "URL del link", name: "linkUrl", widget: "string", hint: "La URL para el link del destacado" }
               - { label: "Texto del link", name: "linkText", required: false, widget: "string", hint: "Opcional. El texto del link del destacado" }
+              - { label: "Precio", name: "price", widget: "number", hint: "Precio del e-book en ARS (pesos argentinos)", required: true, value_type: "int", min: 0 }
+              - { label: "Archivo PDF", name: "fileUrl", widget: "file", hint: "El archivo PDF del e-book que se entregará al cliente", required: true, media_folder: "/public/images/uploads/ebooks/files", public_folder: "/images/uploads/ebooks/files" }
           - {
               label: "Título contacto",
               name: "contactTitle",
@@ -728,6 +730,8 @@ collections:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
               - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta. Podés usar HTML en este campo." }
               - { label: "Texto", name: "text", widget: "string", hint: "El texto de la tarjeta. Podés usar HTML en este campo."}
+              - { label: "Precio", name: "price", widget: "number", hint: "Precio del curso en ARS (pesos argentinos)", required: true, value_type: "int", min: 0 }
+              - { label: "URL del curso", name: "courseUrl", widget: "string", hint: "URL de acceso al curso online (ej: link de Google Drive, Classroom, etc.)", required: true, pattern: ['^https?://.+', "Debe ser una URL válida que empiece con http:// o https://"] }
               -  label: "Alineación de la tarjeta"
                  name: "alignment"
                  widget: "select"
