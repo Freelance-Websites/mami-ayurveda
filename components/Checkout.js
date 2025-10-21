@@ -215,7 +215,7 @@ export default function Checkout({ product }) {
 
             {product.ctas && product.ctas.length > 0 && (
               <div className="space-y-3">
-                {product.ctas.map((cta, index) => (
+                {product.ctas.map((cta, index) => cta.ctaUrl && (
                   <div key={index} className="flex items-center justify-between bg-gray-50 p-4 rounded-lg">
                     <span className="text-gray-700">{cta.ctaText}</span>
                     <a
