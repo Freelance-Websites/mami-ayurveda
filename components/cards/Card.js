@@ -75,12 +75,8 @@ export default function Card({ card }) {
         "
       >
         {card.linkUrl && !card.linkUrl.includes('http') && !isPdfDownload ?
-          <Link href={card.linkUrl}>
-            <a
-              className="hover:opacity-90 transition ease-in-out duration-200"
-            >
-              {content}
-            </a>
+          <Link href={card.linkUrl} className="hover:opacity-90 transition ease-in-out duration-200">
+            {content}
           </Link>
         : isPdfDownload ?
           <button

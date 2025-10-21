@@ -32,20 +32,16 @@ export default function Button({ cta }) {
       :
       <Link
         href={cta.link}
+        className={`
+          ${generalClasses}
+          ${themeClasses}
+          ${cta.classes && cta.classes}
+        `}
       >
-        <a
-          className={`
-            ${generalClasses}
-            ${themeClasses}
-            ${cta.classes && cta.classes}
-          `}
-          href={cta.link}
-        >
-          {cta.text}
-          {cta.icon === true &&
-            <svg fill="none" className="fill-current ml-1" height="7" viewBox="0 0 11 7" width="11" xmlns="http://www.w3.org/2000/svg"><path d="m7.16406.21875-.46875.46875c-.09375.117188-.09375.28125.02344.39844l1.875 1.80468h-8.0625c-.164062 0-.28125.14063-.28125.28126v.65624c0 .16407.117188.28126.28125.28126h8.0625l-1.875 1.82812c-.11719.11719-.11719.28125-.02344.39844l.46875.46875c.11719.09375.28125.09375.39844 0l3.0937-3.09375c.0938-.11719.0938-.28125 0-.39844l-3.0937-3.09375c-.11719-.09375-.28125-.09375-.39844 0z" /></svg>
-          }
-        </a>
+        {cta.text}
+        {cta.icon === true &&
+          <svg fill="none" className="fill-current ml-1" height="7" viewBox="0 0 11 7" width="11" xmlns="http://www.w3.org/2000/svg"><path d="m7.16406.21875-.46875.46875c-.09375.117188-.09375.28125.02344.39844l1.875 1.80468h-8.0625c-.164062 0-.28125.14063-.28125.28126v.65624c0 .16407.117188.28126.28125.28126h8.0625l-1.875 1.82812c-.11719.11719-.11719.28125-.02344.39844l.46875.46875c.11719.09375.28125.09375.39844 0l3.0937-3.09375c.0938-.11719.0938-.28125 0-.39844l-3.0937-3.09375c-.11719-.09375-.28125-.09375-.39844 0z" /></svg>
+        }
       </Link>
     :
       <button
