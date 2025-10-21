@@ -42,13 +42,6 @@ export default function Ayurveda() {
 
   return (
     <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
-      {/* Hidden form for Netlify to detect pdf-download form */}
-      <form name="pdf-download" data-netlify="true" style={{ display: 'none' }}>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="text" name="pdf-requested" />
-      </form>
-      
       <Hero
         title={heroTitle}
         text={heroDescription}

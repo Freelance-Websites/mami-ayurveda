@@ -53,8 +53,10 @@ export default function Button({ cta }) {
           ${generalClasses}
           ${themeClasses}
           ${cta.classes && cta.classes}
+          ${cta.disabled ? 'opacity-50 cursor-not-allowed' : ''}
         `}
         onClick={cta.action ? cta.action : null}
+        disabled={cta.disabled}
       >
         {cta.text}
         {cta.icon === true &&

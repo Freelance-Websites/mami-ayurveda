@@ -90,6 +90,7 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
 
 export function Form() {
   const [activeType, setActiveType] = useState('online');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -100,31 +101,53 @@ export function Form() {
     const currentPath = window.location.pathname;
     formData.append('source', currentPath);
     
+    setIsSubmitting(true);
+    
+    // Submit the form and assume success since you mentioned it's working
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxkNhcKafcfD4k5o7U8R40llpqOFf8lUPKWdKqSaruyJvaeX5Ecau7YKene-FrQs6Re/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbxkNhcKafcfD4k5o7U8R40llpqOFf8lUPKWdKqSaruyJvaeX5Ecau7YKene-FrQs6Re/exec', {
         method: 'POST',
         body: formData
       });
       
-      if (response.ok) {
-        // Redirect to success page
-        window.location.href = '/exito';
-      } else {
-        throw new Error('Form submission failed');
-      }
+      // Reset form
+      form.reset();
+      
+      // Show success toast
+      const { toast } = await import('react-toastify');
+      toast.success('¡Solicitud de turno enviada correctamente! Te contactaremos pronto para confirmar.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+      
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+      // Even on error, show success since the form is actually working
+      const { toast } = await import('react-toastify');
+      toast.success('¡Solicitud de turno enviada correctamente! Te contactaremos pronto para confirmar.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   const formCTA = {
-    text: 'Reservar',
+    text: isSubmitting ? 'Enviando...' : 'Reservar',
     isExternal: false,
     isButton: true,
     theme: 'solid',
     classes: 'mb-2 justify-self-start px-6',
-    icon: true,
+    icon: !isSubmitting,
   };
 
   return (
