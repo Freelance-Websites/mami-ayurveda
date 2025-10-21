@@ -24,11 +24,14 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
       >
         <Image
           src={desktopImage}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ 
+            objectFit: 'cover',
+            objectPosition: position ? position : undefined
+          }}
           alt={title}
           priority
-          objectPosition={position ? position : undefined}
+          sizes="100vw"
         />
       </div>
       {/* Mobile image */}
@@ -38,11 +41,14 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
         >
           <Image
             src={mobileImage}
-            layout="fill"
-            objectFit="cover"
+            fill={true}
+            style={{ 
+              objectFit: 'cover',
+              objectPosition: position ? position : undefined
+            }}
             alt={title}
-            objectPosition={position ? position : undefined}
             priority
+            sizes="100vw"
           />
         </div>
       }

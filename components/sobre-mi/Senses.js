@@ -25,7 +25,6 @@ export default function Senses({ content }) {
             <Image
               src={sense.image}
               alt={sense.title}
-              layout="fixed"
               width={72}
               height={72}
               className="mb-4"

@@ -40,7 +40,6 @@ export default function Sections({ title, sections }) {
               <Image
                 src={section.image}
                 alt={section.title}
-                layout="fixed"
                 width={index === 2 ? 72 : 84}
                 height={index === 2 ? 60 : 72}
                 className='mix-blend-multiply'

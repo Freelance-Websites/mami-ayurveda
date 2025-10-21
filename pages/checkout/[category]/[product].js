@@ -93,6 +93,6 @@ export async function getStaticProps({ params }) {
     props: {
       product,
     },
-    revalidate: 3600,
+    // Removed revalidate for static export compatibility
   };
 }

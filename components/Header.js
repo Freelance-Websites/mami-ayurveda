@@ -55,11 +55,10 @@ export default function Header() {
           >
             <Image
               src="/images/logos/logo.png"
-              srcSet="/images/logos/logo.png 1x, /logos/logo@2x.png 2x"
               alt="Mami Ayurveda Pediatría"
-              layout="fixed"
               width={85}
               height={36}
+              priority
             />
           </Link>
           <div
@@ -72,15 +71,13 @@ export default function Header() {
             >
               <Image
                 src="/images/logos/isologo.png"
-                srcSet="/images/logos/isologo.png 1x, /logos/isologo@2x.png 2x"
                 alt="Mami Ayurveda Pediatría"
-                layout="fixed"
                 width={62}
                 height={137}
                 className="z-10"
                 priority
               />
-              <div className="absolute w-16 h-16 bg-white top-6 rounded-full" />
+              <div className="absolute w-16 h-16 bg-white top-6 rounded-full z-[-1]" />
             </div>
           </div>
           <ul

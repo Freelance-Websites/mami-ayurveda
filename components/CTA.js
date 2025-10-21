@@ -19,10 +19,13 @@ export default function CTA({ heading, cta, classes, desktopImage, mobileImage }
         >
           <Image
             src={desktopImage}
-            layout="fill"
-            objectFit="cover"
+            fill={true}
+            style={{ 
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
             alt={heading}
-            objectPosition="center"
+            sizes="100vw"
           />
         </div>
       )}
@@ -33,10 +36,13 @@ export default function CTA({ heading, cta, classes, desktopImage, mobileImage }
         >
           <Image
             src={mobileImage}
-            layout="fill"
-            objectFit="cover"
+            fill={true}
+            style={{ 
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
             alt={heading}
-            objectPosition="center"
+            sizes="100vw"
           />
         </div>
       }

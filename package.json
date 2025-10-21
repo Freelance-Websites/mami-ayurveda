@@ -26,6 +26,7 @@
     "resend": "^6.2.2"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.14.3",
     "@tailwindcss/line-clamp": "^0.4.0",
     "autoprefixer": "^10.4.5",
     "eslint": "8.14.0",

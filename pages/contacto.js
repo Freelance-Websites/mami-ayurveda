@@ -30,9 +30,10 @@ export default function Contact() {
         <Image
           src={heroDesktopImage}
           alt={heroTitle}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: 'cover' }}
           className="absolute w-full h-full top-0"
+          sizes="100vw"
         />
         {/* Overlay */}
         <div

@@ -102,9 +102,10 @@ export default function SideBySide({ card }) {
         <Image
           src={card.image}
           alt={card.title}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: 'cover' }}
           className="rounded-xl"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </div>
     </li>

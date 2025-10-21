@@ -44,7 +44,6 @@ export default function Doshas({ title, text, doshas }) {
             <Image
               src={dosha.image}
               alt={dosha.title}
-              layout="fixed"
               width={60}
               height={60}
               className="grayscale"

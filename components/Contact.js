@@ -29,19 +29,23 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
       <div className="absolute top-0 left-0 w-full h-full hidden lg:block">
         <Image
           src="/images/uploads/bg/contact-form-desktop.jpg"
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: 'cover' }}
           alt="Imagen de una tabla de madera con flores encima"
+          sizes="100vw"
         />
       </div>
       {/* Mobile Background image */}
       <div className="absolute top-0 left-0 w-full h-full block lg:hidden">
         <Image
           src="/images/uploads/bg/contact-form-mobile.jpg"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="bottom"
+          fill={true}
+          style={{ 
+            objectFit: 'cover',
+            objectPosition: 'bottom'
+          }}
           alt="Imagen de una tabla de madera con flores encima"
+          sizes="100vw"
         />
       </div>
       {/* Overlay */}

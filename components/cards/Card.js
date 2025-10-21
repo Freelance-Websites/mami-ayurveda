@@ -24,9 +24,10 @@ export default function Card({ card }) {
         <Image
           src={card.image}
           alt={card.title}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: 'cover' }}
           className="rounded-t-xl"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {card.icon &&
           <div

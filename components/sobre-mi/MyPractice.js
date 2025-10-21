@@ -29,9 +29,10 @@ export default function MyPractice({ image, title, content, senses }) {
         <Image
           src={image}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: 'cover' }}
           className="md:rounded-lg"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
       <LongText

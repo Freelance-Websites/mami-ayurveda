@@ -160,8 +160,9 @@ export default function Checkout({ product }) {
                   <Image
                     src={product.image}
                     alt={product.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill={true}
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               )}
