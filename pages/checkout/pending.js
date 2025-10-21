@@ -5,15 +5,27 @@ import { getProductBySlug } from '../../lib/products';
 
 export default function CheckoutPending() {
   const router = useRouter();
-  const { category, product: productSlug } = router.query;
   const [product, setProduct] = useState(null);
+  const [checkoutData, setCheckoutData] = useState(null);
 
   useEffect(() => {
-    if (category && productSlug) {
-      const productData = getProductBySlug(category, productSlug);
-      setProduct(productData);
+    // Load checkout data from localStorage
+    const savedCheckout = localStorage.getItem('lastCheckout');
+    if (savedCheckout) {
+      try {
+        const parsed = JSON.parse(savedCheckout);
+        setCheckoutData(parsed);
+        
+        // Get product details using category and slug from localStorage
+        if (parsed.product?.category && parsed.product?.slug) {
+          const productData = getProductBySlug(parsed.product.category, parsed.product.slug);
+          setProduct(productData);
+        }
+      } catch (e) {
+        console.error('Error loading checkout data:', e);
+      }
     }
-  }, [category, productSlug]);
+  }, []);
 
   return (
     <Base 
@@ -52,6 +64,72 @@ export default function CheckoutPending() {
               Tu pago está siendo procesado
             </p>
           </div>
+
+          {/* Customer Info */}
+          {checkoutData && (
+            <div className="bg-amber-50 rounded-lg shadow-lg p-6 mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-amber-900">Información de contacto</h2>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <svg
+                    className="w-5 h-5 text-amber-600 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                  <div>
+                    <span className="text-gray-600 text-sm">Nombre:</span>
+                    <p className="font-semibold">{checkoutData.name}</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <svg
+                    className="w-5 h-5 text-amber-600 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <div>
+                    <span className="text-gray-600 text-sm">Email:</span>
+                    <p className="font-semibold">{checkoutData.email}</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <svg
+                    className="w-5 h-5 text-amber-600 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  <div>
+                    <span className="text-gray-600 text-sm">Teléfono:</span>
+                    <p className="font-semibold">{checkoutData.phone}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Product Info */}
           {product && (

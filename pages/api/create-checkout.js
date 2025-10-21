@@ -91,9 +91,9 @@ export default async function handler(req, res) {
         }
       ],
       back_urls: {
-        success: `${fullBaseUrl}/checkout/success?category=${category}&product=${productSlug}`,
+        success: `${fullBaseUrl}/checkout/success`,
         failure: `${fullBaseUrl}/checkout/${category}/${productSlug}?error=payment_failed`,
-        pending: `${fullBaseUrl}/checkout/pending?category=${category}&product=${productSlug}`,
+        pending: `${fullBaseUrl}/checkout/pending`,
       },
       statement_descriptor: 'MAMI AYURVEDA',
       external_reference: `${category}-${productSlug}-${Date.now()}`,

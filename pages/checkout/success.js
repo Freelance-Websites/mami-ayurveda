@@ -1,30 +1,75 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Base from '../../components/Base';
+import Footer from '../../components/Footer';
 import { getProductBySlug } from '../../lib/products';
 
 export default function CheckoutSuccess() {
   const router = useRouter();
-  const { category, product: productSlug } = router.query;
   const [product, setProduct] = useState(null);
   const [checkoutData, setCheckoutData] = useState(null);
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(null);
 
   useEffect(() => {
-    if (category && productSlug) {
-      const productData = getProductBySlug(category, productSlug);
-      setProduct(productData);
-    }
-
+    // Load checkout data from localStorage
     const savedCheckout = localStorage.getItem('lastCheckout');
     if (savedCheckout) {
       try {
         const parsed = JSON.parse(savedCheckout);
         setCheckoutData(parsed);
+        
+        // Get product details using category and slug from localStorage
+        if (parsed.product?.category && parsed.product?.slug) {
+          const productData = getProductBySlug(parsed.product.category, parsed.product.slug);
+          setProduct(productData);
+        }
       } catch (e) {
         console.error('Error loading checkout data:', e);
       }
     }
-  }, [category, productSlug]);
+  }, []);
+
+  // Send email to customer when product and checkout data are available
+  useEffect(() => {
+    if (product && checkoutData && !emailSent && checkoutData.email) {
+      sendCustomerEmail();
+    }
+  }, [product, checkoutData, emailSent]);
+
+  const sendCustomerEmail = async () => {
+    try {
+      const response = await fetch('/api/send-customer-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: checkoutData.email,
+          name: checkoutData.name,
+          phone: checkoutData.phone,
+          productTitle: product.title.replace(/<[^>]*>/g, ''),
+          productCategory: product.categoryDisplay,
+          productPrice: product.price,
+          deliveryUrl: checkoutData.product?.deliveryUrl || null,
+          isEbook: product.category === 'ebooks',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log('Purchase email sent to customer successfully');
+        setEmailSent(true);
+      } else {
+        console.error('Failed to send email:', data.error);
+        setEmailError(data.error);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setEmailError(error.message);
+    }
+  };
 
   return (
     <Base 
@@ -60,6 +105,28 @@ export default function CheckoutSuccess() {
             <p className="text-xl text-gray-600 mb-6">
               Tu compra se ha procesado correctamente.
             </p>
+            
+            {/* Email Status Indicator */}
+            {emailSent && (
+              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg">
+                <svg
+                  className="w-5 h-5 text-blue-600 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span className="text-blue-800 text-sm font-medium">
+                  Email de confirmación enviado a {checkoutData?.email}
+                </span>
+              </div>
+            )}
           </div>
 
           {checkoutData && (
@@ -320,6 +387,9 @@ export default function CheckoutSuccess() {
           </div>
         </div>
       </div>
+      <Footer
+        page="checkout"
+      />
     </Base>
   );
 }

@@ -42,7 +42,7 @@ ebooksList:
     title: Chakras en el embarazo
     text: 10 páginas donde encontrás el papel de cada chakra en el embarazo y herramientas para llevar un embarazo consciente.
     linkText: Comprar
-    price: 2000
+    price: 10
     fileUrl: /images/uploads/ebooks/files/chakras-en-el-embarazo.pdf
   - image: /images/uploads/ebooks/ebook-5.jpg
     icon: /images/uploads/icons/ebooks/ebook-5.svg
