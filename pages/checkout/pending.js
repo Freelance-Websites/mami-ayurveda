@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Base from '../../components/Base';
 import { getProductBySlug } from '../../lib/products';
 
@@ -244,12 +245,12 @@ export default function CheckoutPending() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            <Link
               href="/"
               className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-center font-semibold"
             >
               Volver al inicio
-            </a>
+            </Link>
             <a
               href="https://www.instagram.com/mami.ayurveda"
               target="_blank"

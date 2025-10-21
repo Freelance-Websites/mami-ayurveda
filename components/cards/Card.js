@@ -32,9 +32,11 @@ export default function Card({ card }) {
           <div
             className="bg-orange-400 absolute w-12 h-12 rounded-full flex items-center justify-center left-4 -bottom-4"
           >
-            <img
+            <Image
               src={card.icon}
               alt={card.title}
+              width={32}
+              height={32}
             />
           </div>
         }

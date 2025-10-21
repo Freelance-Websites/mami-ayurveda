@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import Link from 'next/link';
 import Base from '../../components/Base';
 import Footer from '../../components/Footer';
 import { getProductBySlug } from '../../lib/products';
@@ -12,40 +13,7 @@ export default function CheckoutSuccess() {
   const [emailError, setEmailError] = useState(null);
   const [sheetsSaved, setSheetsSaved] = useState(false);
 
-  useEffect(() => {
-    // Load checkout data from localStorage
-    const savedCheckout = localStorage.getItem('lastCheckout');
-    if (savedCheckout) {
-      try {
-        const parsed = JSON.parse(savedCheckout);
-        setCheckoutData(parsed);
-        
-        // Get product details using category and slug from localStorage
-        if (parsed.product?.category && parsed.product?.slug) {
-          const productData = getProductBySlug(parsed.product.category, parsed.product.slug);
-          setProduct(productData);
-        }
-      } catch (e) {
-        console.error('Error loading checkout data:', e);
-      }
-    }
-  }, []);
-
-  // Send email to customer when product and checkout data are available
-  useEffect(() => {
-    if (product && checkoutData && !emailSent && checkoutData.email) {
-      sendCustomerEmail();
-    }
-  }, [product, checkoutData, emailSent]);
-
-  // Save to Google Sheets when product and checkout data are available
-  useEffect(() => {
-    if (product && checkoutData && !sheetsSaved) {
-      saveToGoogleSheets();
-    }
-  }, [product, checkoutData, sheetsSaved]);
-
-  const sendCustomerEmail = async () => {
+  const sendCustomerEmail = useCallback(async () => {
     try {
       const response = await fetch('/api/send-customer-email', {
         method: 'POST',
@@ -77,9 +45,9 @@ export default function CheckoutSuccess() {
       console.error('Error sending email:', error);
       setEmailError(error.message);
     }
-  };
+  }, [checkoutData, product]);
 
-  const saveToGoogleSheets = async () => {
+  const saveToGoogleSheets = useCallback(async () => {
     try {
       const formData = new FormData();
       
@@ -105,7 +73,40 @@ export default function CheckoutSuccess() {
       console.error('Error saving to Google Sheets:', error);
       // Don't block the UI if this fails
     }
-  };
+  }, [checkoutData, product]);
+
+  useEffect(() => {
+    // Load checkout data from localStorage
+    const savedCheckout = localStorage.getItem('lastCheckout');
+    if (savedCheckout) {
+      try {
+        const parsed = JSON.parse(savedCheckout);
+        setCheckoutData(parsed);
+        
+        // Get product details using category and slug from localStorage
+        if (parsed.product?.category && parsed.product?.slug) {
+          const productData = getProductBySlug(parsed.product.category, parsed.product.slug);
+          setProduct(productData);
+        }
+      } catch (e) {
+        console.error('Error loading checkout data:', e);
+      }
+    }
+  }, []);
+
+  // Send email to customer when product and checkout data are available
+  useEffect(() => {
+    if (product && checkoutData && !emailSent && checkoutData.email) {
+      sendCustomerEmail();
+    }
+  }, [product, checkoutData, emailSent, sendCustomerEmail]);
+
+  // Save to Google Sheets when product and checkout data are available
+  useEffect(() => {
+    if (product && checkoutData && !sheetsSaved) {
+      saveToGoogleSheets();
+    }
+  }, [product, checkoutData, sheetsSaved, saveToGoogleSheets]);
 
   return (
     <Base 
@@ -271,7 +272,7 @@ export default function CheckoutSuccess() {
                   <a
                     href={checkoutData.product.deliveryUrl}
                     target={product.category === 'cursos-y-talleres' ? '_blank' : '_self'}
-                    rel={product.category === 'cursos-y-talleres' ? 'noopener noreferrer' : ''}
+                    rel="noreferrer"
                     download={product.category === 'ebooks'}
                     className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold"
                   >
@@ -408,18 +409,18 @@ export default function CheckoutSuccess() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            <Link
               href="/"
               className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-center font-semibold"
             >
               Volver al inicio
-            </a>
-            <a
+            </Link>
+            <Link
               href={product?.category === 'ebooks' ? '/ebooks' : '/cursos-y-talleres'}
               className="flex-1 px-6 py-3 bg-white border-2 border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition text-center font-semibold"
             >
               Ver más productos
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import Base from '../../../components/Base';
 import Checkout from '../../../components/Checkout';
@@ -30,18 +31,18 @@ export default function CheckoutPage({ product }) {
             El producto que buscás no existe.
           </p>
           <div className="space-x-4">
-            <a
+            <Link
               href="/ebooks"
               className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
             >
               Ver E-books
-            </a>
-            <a
+            </Link>
+            <Link
               href="/cursos-y-talleres"
               className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
             >
               Ver Cursos
-            </a>
+            </Link>
           </div>
         </div>
       </Base>

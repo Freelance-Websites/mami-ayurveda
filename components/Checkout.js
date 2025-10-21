@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Checkout({ product }) {
   const [loading, setLoading] = useState(false);
@@ -16,25 +17,7 @@ export default function Checkout({ product }) {
   const [formErrors, setFormErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(false);
 
-  // Load saved data from localStorage on mount
-  useEffect(() => {
-    const savedData = localStorage.getItem('checkoutUserData');
-    if (savedData) {
-      try {
-        const parsed = JSON.parse(savedData);
-        setFormData(parsed);
-      } catch (e) {
-        console.error('Error loading saved data:', e);
-      }
-    }
-  }, []);
-
-  // Validate form whenever formData changes
-  useEffect(() => {
-    validateForm();
-  }, [formData]);
-
-  const validateForm = () => {
+  const validateForm = useCallback(() => {
     const errors = {};
     
     if (!formData.name.trim()) {
@@ -59,7 +42,25 @@ export default function Checkout({ product }) {
     
     setFormErrors(errors);
     setIsFormValid(Object.keys(errors).length === 0);
-  };
+  }, [formData]);
+
+  // Load saved data from localStorage on mount
+  useEffect(() => {
+    const savedData = localStorage.getItem('checkoutUserData');
+    if (savedData) {
+      try {
+        const parsed = JSON.parse(savedData);
+        setFormData(parsed);
+      } catch (e) {
+        console.error('Error loading saved data:', e);
+      }
+    }
+  }, []);
+
+  // Validate form whenever formData changes
+  useEffect(() => {
+    validateForm();
+  }, [formData, validateForm]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -142,11 +143,11 @@ export default function Checkout({ product }) {
     <div className="container mx-auto px-4 py-8 md:py-16">
       <div className="max-w-6xl mx-auto">
         <nav className="mb-8 text-sm text-gray-600">
-          <a href="/" className="hover:text-green-600">Inicio</a>
+          <Link href="/" className="hover:text-green-600">Inicio</Link>
           <span className="mx-2">/</span>
-          <a href={`/${product.category}`} className="hover:text-green-600 capitalize">
+          <Link href={`/${product.category}`} className="hover:text-green-600 capitalize">
             {product.category === 'ebooks' ? 'E-books' : 'Cursos y Talleres'}
-          </a>
+          </Link>
           <span className="mx-2">/</span>
           <span className="text-gray-900">Checkout</span>
         </nav>
