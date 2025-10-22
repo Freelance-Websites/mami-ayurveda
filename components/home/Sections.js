@@ -36,19 +36,18 @@ export default function Sections({ title, sections }) {
               cursor-pointer
             "
           >
-            <Link href={section.link} className="text-center">
-              <Image
-                src={section.image}
-                alt={section.title}
-                width={index === 2 ? 72 : 84}
-                height={index === 2 ? 60 : 72}
-                className='mix-blend-multiply'
-              />
+            <Link href={section.link} className="text-center relative">
+              <div className='h-24 w-auto'>
+                <Image
+                  src={section.image}
+                  alt={section.title}
+                  width={72}
+                  height={index === 3 ? 60 : 72}
+                  className='mx-auto mix-blend-multiply'
+                />
+              </div>
               <h4
-                className={`
-                    uppercase text-orange-400 text-xs font-semibold tracking-wider mt-4 flex items-center justify-center
-                    ${index === 2 ? 'relative top-0 md:top-3' : ''}
-                  `}
+                className="uppercase text-orange-400 text-xs font-semibold tracking-wider mt-4 flex items-center justify-center"
               >
                 {section.title}
                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current ml-1 relative -top-px">
