@@ -46,7 +46,7 @@ export default function Doshas({ title, text, doshas }) {
               alt={dosha.title}
               width={60}
               height={60}
-              className="grayscale"
+              className="grayscale mx-auto mb-4"
             />
             <h4 className="mt-1 uppercase text-slate-700 text-xs font-semibold tracking-wider">{dosha.title}</h4>
             <p className="mt-1 uppercase text-slate-500 text-xs font-semibold tracking-wider">{dosha.text}</p>
