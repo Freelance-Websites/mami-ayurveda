@@ -19,7 +19,7 @@ export default function Card({ card }) {
   const content = 
     <>
       <div
-        className="h-48 md:h-64 relative"
+        className="aspect-video relative"
       >
         <Image
           src={card.image}
@@ -36,8 +36,8 @@ export default function Card({ card }) {
             <Image
               src={card.icon}
               alt={card.title}
-              width={32}
-              height={32}
+              width={24}
+              height={24}
             />
           </div>
         }
