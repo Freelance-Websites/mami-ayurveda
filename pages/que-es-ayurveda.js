@@ -59,7 +59,7 @@ export default function Ayurveda() {
         className="
           bg-lime-50
           relative md:-top-32
-          mt-12 sm:mt-0 sm:pt-24 md:pt-32 lg:pt-48
+          mt-12 sm:mt-0 sm:pt-16 md:pt-24
         "
         id="conoce-tus-doshas"
       >
@@ -67,8 +67,8 @@ export default function Ayurveda() {
           content={testDoshas}
           type="side-by-side"
           classes="
-            pt-4 sm:pt-16 md:pt-24 lg:pt-32
-            pb-12 lg:pb-16
+            pt-8 sm:pt-16 md:pt-24
+            pb-8 md:pb-16
           "
         />
         <CardsContainer

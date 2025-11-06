@@ -51,7 +51,7 @@ export default function SocialMediaCallout({ title, socialMedia }) {
         <ul
           className="
             grid grid-cols-1 md:grid-cols-3 gap-4
-            pt-12 md:pt-16
+            pt-4 md:pt-8
             relative z-10 -bottom-4
           "
         >

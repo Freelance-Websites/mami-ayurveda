@@ -10,7 +10,7 @@ export default function Sections({ title, sections }) {
     <section
       className="
         container mx-auto
-        py-16 sm:py-24 md:py-32 lg:py-48 px-4
+        py-8 sm:py-16 md:py-24 px-4
         text-center
       "
     >

@@ -62,8 +62,8 @@ export default function Membership() {
       <LongText
         content={aboutContent}
         id="about"
-        topPadding="pt-8 sm:pt-16 md:pt-24 lg:pt-32"
-        bottomPadding="pb-8 sm:pb-16 md:pb-24 lg:pb-32"
+        topPadding="pt-8 sm:pt-16 md:pt-24"
+        bottomPadding="pb-8 sm:pb-16 md:pb-24"
         classes="scroll-mt-12"
       />
       <CTA
@@ -77,7 +77,7 @@ export default function Membership() {
           isExternal: true
         }}
       />
-      <section className='bg-slate-50 pt-8 sm:pt-12 md:-pt-16 lg:pt-24 pb-8 sm:pb-16 md:pb-24 lg:pb-32'>
+      <section className='bg-slate-50 pt-8 sm:pt-12 md:-pt-16 md:pt-24 pb-8 sm:pb-16 md:pb-24'>
         <CardsContainer
           content={aboutMeContent}
           type="side-by-side"

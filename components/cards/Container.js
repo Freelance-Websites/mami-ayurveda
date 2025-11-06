@@ -10,7 +10,7 @@ export default function CardsContainer({ type, title, text, content, classes, id
     <section
       className={`
         relative z-10
-        ${backgroundColor ? `${backgroundColor} py-16 sm:py-24 md:py-32` : undefined}
+        ${backgroundColor ? `${backgroundColor} py-8 sm:py-16 md:py-24` : undefined}
       `}
       id={id ? id : undefined}
     >

@@ -52,9 +52,7 @@ export default function Courses() {
       <CardsContainer
         content={coursesWithCheckoutLinks}
         type="side-by-side"
-        classes="
-          py-4 sm:py-16 md:py-24 lg:py-32
-        "
+        classes="py-8 sm:py-16 md:py-24"
         id="taller-alimentacion-familiar-ayur"
       />
       <Contact

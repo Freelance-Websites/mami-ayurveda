@@ -55,7 +55,7 @@ export default function Ebooks() {
       <section
         className="
           container mx-auto relative z-10
-          pt-16 sm:pt-24 md:pt-32
+          pt-8 sm:pt-16 md:pt-24
         "
         id="details"
       >
