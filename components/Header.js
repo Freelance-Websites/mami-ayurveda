@@ -24,7 +24,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      if (currentScrollY > 600) {
+      if (currentScrollY > 200) {
         // Hide logo after scrolling past 600px
         setShowCenterLogo(false);
       } else {
