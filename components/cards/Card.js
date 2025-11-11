@@ -1,27 +1,43 @@
 // Globals
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Components
+import PdfDownloadPopup from '../PdfDownloadPopup';
+
 export default function Card({ card }) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+  const handlePdfClick = (e) => {
+    e.preventDefault();
+    setIsPopupOpen(true);
+  };
+
+  const isPdfDownload = card.linkUrl && card.linkUrl.includes('.pdf');
+
   const content = 
     <>
       <div
-        className="h-48 md:h-64 relative"
+        className="aspect-video relative"
       >
         <Image
           src={card.image}
           alt={card.title}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: 'cover' }}
           className="rounded-t-xl"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {card.icon &&
           <div
             className="bg-orange-400 absolute w-12 h-12 rounded-full flex items-center justify-center left-4 -bottom-4"
           >
-            <img
+            <Image
               src={card.icon}
               alt={card.title}
+              width={24}
+              height={24}
             />
           </div>
         }
@@ -51,31 +67,46 @@ export default function Card({ card }) {
       </div>
     </>;
   return (
-    <li
-      className="
-        rounded-xl
-        border border-gray-100
-        bg-white
-      "
-    >
-      {card.linkUrl && !card.linkUrl.includes('http') && !card.linkUrl.includes('pdf') ?
-        <Link href={card.linkUrl}>
+    <>
+      <li
+        className="
+          rounded-xl
+          border border-gray-100
+          bg-white
+        "
+      >
+        {card.linkUrl && !card.linkUrl.includes('http') && !isPdfDownload ?
+          <Link href={card.linkUrl} className="hover:opacity-90 transition ease-in-out duration-200">
+            {content}
+          </Link>
+        : isPdfDownload ?
+          <button
+            onClick={handlePdfClick}
+            className="hover:opacity-90 transition ease-in-out duration-200 w-full text-left"
+          >
+            {content}
+          </button>
+        :
           <a
             className="hover:opacity-90 transition ease-in-out duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={card.linkUrl}
           >
             {content}
           </a>
-        </Link>
-      :
-        <a
-          className="hover:opacity-90 transition ease-in-out duration-200"
-          target="_blank"
-          rel="noopener noreferrer"
-          href={card.linkUrl}
-        >
-          {content}
-        </a>
-      }
-    </li>
+        }
+      </li>
+
+      {/* PDF Download Popup */}
+      {isPdfDownload && (
+        <PdfDownloadPopup
+          isOpen={isPopupOpen}
+          onClose={() => setIsPopupOpen(false)}
+          pdfUrl={card.linkUrl}
+          title={card.title || "Descarga el PDF"}
+        />
+      )}
+    </>
   );
 }

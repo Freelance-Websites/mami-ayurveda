@@ -11,6 +11,8 @@ import { attributes } from "../content/que-es-ayurveda.md";
 export default function Ayurveda() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroDesktopImage,
     heroMobileImage,
     heroTitle,
@@ -39,7 +41,7 @@ export default function Ayurveda() {
   };
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}
@@ -57,7 +59,7 @@ export default function Ayurveda() {
         className="
           bg-lime-50
           relative md:-top-32
-          mt-12 sm:mt-0 sm:pt-24 md:pt-32 lg:pt-48
+          mt-12 sm:mt-0 sm:pt-16 md:pt-24
         "
         id="conoce-tus-doshas"
       >
@@ -65,15 +67,15 @@ export default function Ayurveda() {
           content={testDoshas}
           type="side-by-side"
           classes="
-            pt-4 sm:pt-16 md:pt-24 lg:pt-32
-            pb-0 lg:pb-16
+            pt-8 sm:pt-16 md:pt-24
+            pb-8 md:pb-16
           "
         />
         <CardsContainer
           title={highlightsTitle}
           content={highlights}
           type="standard"
-          classes="top-16 md:top-32"
+          backgroundColor='bg-slate-50'
         />
       </section>
       <Contact

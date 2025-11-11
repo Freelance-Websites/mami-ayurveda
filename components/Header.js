@@ -1,5 +1,5 @@
 // Globals
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -9,6 +9,7 @@ import Button from './forms/Button';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showCenterLogo, setShowCenterLogo] = useState(true);
   const router = useRouter();
 
   const cta = {
@@ -18,6 +19,26 @@ export default function Header() {
     isButton: false,
     theme: 'solid',
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 200) {
+        // Hide logo after scrolling past 600px
+        setShowCenterLogo(false);
+      } else {
+        // Show logo when above 600px
+        setShowCenterLogo(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -30,37 +51,33 @@ export default function Header() {
         >
           <Link
             href="/"
+            className="hover:opacity-80 flex-1 transition ease-in-out duration-200"
           >
-            <a
-              className="hover:opacity-80 flex-1 transition ease-in-out duration-200"
-            >
-              <Image
-                src="/images/logos/logo.png"
-                srcSet="/images/logos/logo.png 1x, /logos/logo@2x.png 2x"
-                alt="Mami Ayurveda Pediatría"
-                layout="fixed"
-                width={85}
-                height={36}
-              />
-            </a>
+            <Image
+              src="/images/logos/logo.png"
+              alt="Mami Ayurveda Pediatría"
+              width={85}
+              height={36}
+              priority
+            />
           </Link>
           <div
-            className="flex-1 justify-center relative hidden lg:flex"
+            className={`flex-1 justify-center relative hidden lg:flex transition-all duration-300 ease-in-out ${
+              showCenterLogo ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-4 pointer-events-none'
+            }`}
           >
             <div
               className="absolute top-0"
             >
               <Image
                 src="/images/logos/isologo.png"
-                srcSet="/images/logos/isologo.png 1x, /logos/isologo@2x.png 2x"
                 alt="Mami Ayurveda Pediatría"
-                layout="fixed"
                 width={62}
                 height={137}
                 className="z-10"
                 priority
               />
-              <div className="absolute w-16 h-16 bg-white top-6 rounded-full" />
+              <div className="absolute w-16 h-16 bg-white top-6 rounded-full z-[-1]" />
             </div>
           </div>
           <ul
@@ -69,29 +86,23 @@ export default function Header() {
             <li className="hidden md:block">
               <Link
                 href="/ebooks"
+                className={`
+                  ${router.asPath === '/ebooks' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
+                  uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
+                `}
               >
-                <a
-                  className={`
-                    ${router.asPath === '/ebooks' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
-                    uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
-                  `}
-                >
-                  E-books
-                </a>
+                E-books
               </Link>
             </li>
             <li className="hidden md:block">
               <Link
                 href="/membresia"
+                className={`
+                  ${router.asPath === '/membresia' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
+                  uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
+                `}
               >
-                <a
-                  className={`
-                    ${router.asPath === '/membresia' ? 'text-orange-400 hover:text-orange-500' : 'text-slate-700 hover:text-slate-600'}
-                    uppercase text-xs font-semibold tracking-wider transition ease-in-out duration-200
-                  `}
-                >
-                  Membres&iacute;a
-                </a>
+                Membres&iacute;a
               </Link>
             </li>
             <li>
@@ -142,141 +153,111 @@ const DropdownMenu = ({ isVisible, setIsVisible }) => {
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Inicio
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Inicio
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/que-es-ayurveda"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              ¿Qu&eacute; es Ayurveda?
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            ¿Qu&eacute; es Ayurveda?
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/sobre-mi"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Sobre m&iacute;
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Sobre m&iacute;
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/sobre-mi#mi-enfoque"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Mi enfoque m&eacute;dico
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Mi enfoque m&eacute;dico
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/membresia"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Membres&iacute;a
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Membres&iacute;a
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/cursos-y-talleres"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Cursos y talleres
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Cursos y talleres
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/ebooks"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              E-books
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            E-books
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/turnos#preguntas-frecuentes"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Preguntas frecuentes
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Preguntas frecuentes
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group md:mb-4 flex items-center justify-center">
           <Link
             href="/turnos#solicitar-turno"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Turnos
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Turnos
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
         <li className="group flex items-center justify-center">
           <Link
             href="/contacto"
+            className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
           >
-            <a
-              className="font-serif font-light text-3xl leading-normal leading-none leading-tight md:text-5xl text-slate-700 group-hover:text-orange-400 transition ease-in-out duration-200 leading-loose relative"
-            >
-              Contacto
-              <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
-                <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
-              </span>
-            </a>
+            Contacto
+            <span className="opacity-0 transition ease-in-out duration-200 group-hover:opacity-100 absolute -right-10 top-6 hidden md:block">
+              <svg fill="none" height="17" viewBox="0 0 28 17" width="28" xmlns="http://www.w3.org/2000/svg" className="fill-orange-400"><path d="m19.4375.25-.5.4375c-.25.3125-.25.75 0 1.0625l5.25 5.1875h-23.4375c-.4375 0-.75.375-.75.75v.625c0 .4375.3125.75.75.75h23.4375l-5.25 5.25c-.25.3125-.25.75 0 1.0625l.5.4375c.25.3125.75.3125 1.0625 0l7.25-7.25c.3125-.3125.3125-.75 0-1.0625l-7.25-7.25c-.3125-.3125-.8125-.3125-1.0625 0z"/></svg>
+            </span>
           </Link>
         </li>
       </ul>

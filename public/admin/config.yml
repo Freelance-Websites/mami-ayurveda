@@ -20,6 +20,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -74,6 +88,21 @@ collections:
               - { label: "Título", name: "title", widget: "string", hint: "El título de la sección" }
               - { label: "Link", name: "link", widget: "string", hint: "El link de la sección" }
           - {
+              label: "Título redes sociales",
+              name: "socialMediaTitle",
+              widget: "string",
+              hint: "El título de la sección de redes sociales",
+            }
+          - label: "Redes sociales"
+            name: "socialMedia"
+            widget: "list"
+            allow_add: true
+            hint: "Agregá todas las redes sociales que quieras mostrar"
+            fields:
+              - { label: "Plataforma", name: "platform", widget: "select", options: ["Instagram", "Spotify", "Youtube", "Facebook", "Twitter", "LinkedIn", "TikTok", "WhatsApp", "Pinterest"], hint: "La plataforma de red social" }
+              - { label: "Texto", name: "text", widget: "string", hint: "El texto que se muestra debajo del ícono" }
+              - { label: "URL", name: "url", widget: "string", hint: "El enlace a la red social" }
+          - {
               label: "Título destacados",
               name: "highlightsTitle",
               widget: "string",
@@ -123,6 +152,20 @@ collections:
               widget: "string",
               required: false,
               hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
             }
           - {
               label: "Imagen escritorio encabezado",
@@ -249,6 +292,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -360,6 +417,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -406,6 +477,67 @@ collections:
               required: false,
               hint: "Podés usar HTML en este campo",
             }
+          - label: "Información sobre mí"
+            name: "aboutContent"
+            widget: "text"
+            required: false
+            hint: "Contenido adicional sobre la membresía. Podés usar HTML en este campo"
+          - label: "Cards sobre mí"
+            name: "aboutMeCards"
+            widget: "list"
+            allow_add: true
+            required: false
+            hint: "Tarjetas con información adicional"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
+              - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta" }
+              - { label: "Alineación", name: "alignment", widget: "select", options: ["izquierda", "derecha"], hint: "La alineación de la tarjeta" }
+              - { label: "Texto", name: "text", widget: "text", hint: "El texto de la tarjeta. Podés usar HTML en este campo." }
+              - label: "CTAs"
+                name: "ctas"
+                widget: "list"
+                hint: "Los botones de la tarjeta"
+                allow_add: true
+                required: false
+                max: 2
+                fields:
+                  - { label: "Texto", name: "ctaText", widget: "string", hint: "El texto del botón" }
+                  - { label: "URL", name: "ctaUrl", widget: "string", hint: "El link del botón" }
+          - {
+              label: "Título CTA",
+              name: "ctaHeading",
+              widget: "string",
+              hint: "El título del CTA. Podés usar HTML en este campo",
+              required: false
+            }
+          - {
+              label: "Imagen escritorio CTA",
+              name: "ctaDesktopImage",
+              widget: "image",
+              hint: "La imagen de fondo para el CTA en escritorio",
+              required: false
+            }
+          - {
+              label: "Imagen mobile CTA",
+              name: "ctaMobileImage",
+              widget: "image",
+              required: false,
+              hint: "La imagen de fondo para el CTA en dispositivos móviles",
+            }
+          - {
+              label: "Texto del botón CTA",
+              name: "ctaText",
+              widget: "string",
+              hint: "El texto del botón del CTA",
+              required: false
+            }
+          - {
+              label: "Link del botón CTA",
+              name: "ctaLink",
+              widget: "string",
+              hint: "El link del botón del CTA",
+              required: false
+            }
           - {
               label: "Título contacto",
               name: "contactTitle",
@@ -439,6 +571,20 @@ collections:
               widget: "string",
               required: false,
               hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
             }
           - {
               label: "Imagen escritorio encabezado",
@@ -501,10 +647,12 @@ collections:
             hint: "Podés cargar cuantas quieras."
             fields:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para el destacado" }
+              - { label: "Ícono", name: "icon", widget: "image", hint: "Opcional. El ícono del ebook", required: false }
               - { label: "Título", name: "title", widget: "string", hint: "Opcional. El título del destacado", required: false }
               - { label: "Texto", name: "text", widget: "string", hint: "Opcional. El text del destacado", required: false }
-              - { label: "URL del link", name: "linkUrl", widget: "string", hint: "La URL para el link del destacado" }
               - { label: "Texto del link", name: "linkText", required: false, widget: "string", hint: "Opcional. El texto del link del destacado" }
+              - { label: "Precio", name: "price", widget: "number", hint: "Precio del e-book en ARS (pesos argentinos)", required: true, value_type: "int", min: 0 }
+              - { label: "Archivo PDF", name: "fileUrl", widget: "file", hint: "El archivo PDF del e-book que se entregará al cliente", required: true, media_folder: "/public/images/uploads/ebooks/files", public_folder: "/images/uploads/ebooks/files" }
           - {
               label: "Título contacto",
               name: "contactTitle",
@@ -540,6 +688,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -568,6 +730,8 @@ collections:
               - { label: "Imagen", name: "image", widget: "image", hint: "La imagen para la tarjeta" }
               - { label: "Título", name: "title", widget: "string", hint: "El título de la tarjeta. Podés usar HTML en este campo." }
               - { label: "Texto", name: "text", widget: "string", hint: "El texto de la tarjeta. Podés usar HTML en este campo."}
+              - { label: "Precio", name: "price", widget: "number", hint: "Precio del curso en ARS (pesos argentinos)", required: true, value_type: "int", min: 0 }
+              - { label: "URL del curso", name: "courseUrl", widget: "string", hint: "URL de acceso al curso online (ej: link de Google Drive, Classroom, etc.)", required: true, pattern: ['^https?://.+', "Debe ser una URL válida que empiece con http:// o https://"] }
               -  label: "Alineación de la tarjeta"
                  name: "alignment"
                  widget: "select"
@@ -628,6 +792,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -678,6 +856,20 @@ collections:
               hint: "Para el título de la pestaña",
             }
           - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
+            }
+          - {
               label: "Imagen escritorio encabezado",
               name: "heroDesktopImage",
               widget: "image",
@@ -700,6 +892,20 @@ collections:
               widget: "string",
               required: false,
               hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales. Si no se completa, se usa el título de la página",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO/redes sociales (máximo 160 caracteres recomendado)",
             }
           - {
               label: "Título encabezado",

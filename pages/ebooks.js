@@ -6,10 +6,13 @@ import Contact from '../components/Contact';
 
 // Content
 import { attributes } from "../content/ebooks.md";
+import { slugify } from '../lib/products';
 
 export default function Ebooks() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroCtaText,
@@ -24,6 +27,12 @@ export default function Ebooks() {
     contactCTAs
   } = attributes;
 
+  // Map ebooks to include checkout URLs
+  const ebooksWithCheckoutLinks = ebooksList.map(ebook => ({
+    ...ebook,
+    linkUrl: `/checkout/ebooks/${slugify(ebook.title)}`,
+  }));
+
   const cta = {
     link: heroCtaLink,
     text: heroCtaText,
@@ -34,7 +43,7 @@ export default function Ebooks() {
   };
 
   return (
-    <Base title={pageTitle} classes="bg-slate-50">
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription} classes="bg-slate-50">
       <Hero
         title={heroTitle}
         text={heroDescription}
@@ -46,12 +55,12 @@ export default function Ebooks() {
       <section
         className="
           container mx-auto relative z-10
-          pt-16 sm:pt-24 md:pt-32
+          pt-8 sm:pt-16 md:pt-24
         "
         id="details"
       >
         <CardsContainer
-          content={ebooksList}
+          content={ebooksWithCheckoutLinks}
           type="standard"
           title={ebooksTitle}
           text={ebooksText}

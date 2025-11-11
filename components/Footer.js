@@ -1,14 +1,15 @@
 export default function Footer({ page }) {
   return (
     <footer
-      className="
-        absolute bottom-0 p-4 w-full
-      "
+      className={`
+        ${page === 'checkout' ? 'relative bg-slate-500 px-4 py-8' : 'p-4 absolute bottom-0'}
+        w-full
+      `}
     >
       <div
         className={`
-          flex items-center flex-col text-center md:text-left md:flex-row
-          ${page === 'contact' ? 'md:justify-center' : 'md:justify-between'}
+          flex items-center flex-col text-center md:text-left
+          ${page === 'contact' && 'relative md:top-8'}
         `}
       >
         <p

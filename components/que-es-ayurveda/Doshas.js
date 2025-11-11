@@ -9,7 +9,7 @@ export default function Doshas({ title, text, doshas }) {
     <section
       className="
         container mx-auto relative z-10
-        pt-16 sm:pt-24 md:pt-32 lg:pt-48 px-4
+        pt-8 sm:pt-16 md:pt-24 px-4
         text-center
       "
       id="que-son-los-doshas"
@@ -30,7 +30,7 @@ export default function Doshas({ title, text, doshas }) {
       <ul
         className="
           grid grid-cols-1 md:grid-cols-3 gap-4
-          pt-12 md:pt-16
+          pt-4 md:pt-8
         "
       >
         {doshas.map((dosha, index) => 
@@ -44,10 +44,9 @@ export default function Doshas({ title, text, doshas }) {
             <Image
               src={dosha.image}
               alt={dosha.title}
-              layout="fixed"
               width={60}
               height={60}
-              className="grayscale"
+              className="grayscale mx-auto mb-4"
             />
             <h4 className="mt-1 uppercase text-slate-700 text-xs font-semibold tracking-wider">{dosha.title}</h4>
             <p className="mt-1 uppercase text-slate-500 text-xs font-semibold tracking-wider">{dosha.text}</p>

@@ -8,6 +8,8 @@ import { attributes } from "../content/exito.md";
 export default function Success() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroCtaText,
@@ -24,7 +26,7 @@ export default function Success() {
   }];
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Contact
         title={heroTitle}
         text={heroDescription}

@@ -2,10 +2,14 @@
 import MainHead from "./MainHead";
 import Header from "./Header";
 
-export default function Base({ title, classes, children }) {
+export default function Base({ title, metaTitle, metaDescription, classes, children }) {
   return (
     <>
-      <MainHead title={title} />
+      <MainHead 
+        title={title} 
+        metaTitle={metaTitle}
+        metaDescription={metaDescription}
+      />
       <Header />
       <main
         className={classes ? classes : undefined}

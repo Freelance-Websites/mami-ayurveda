@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mamiayurveda.com.ar
+
+# Sitemaps
+Sitemap: https://mamiayurveda.com.ar/sitemap.xml

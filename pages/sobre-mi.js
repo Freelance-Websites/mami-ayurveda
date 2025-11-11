@@ -11,6 +11,8 @@ import { attributes } from "../content/sobre-mi.md";
 export default function AboutMe() {
   const {
     pageTitle,
+    metaTitle,
+    metaDescription,
     heroTitle,
     heroDescription,
     heroDesktopImage,
@@ -38,7 +40,7 @@ export default function AboutMe() {
   };
 
   return (
-    <Base title={pageTitle}>
+    <Base title={pageTitle} metaTitle={metaTitle} metaDescription={metaDescription}>
       <Hero
         title={heroTitle}
         text={heroDescription}
@@ -50,8 +52,8 @@ export default function AboutMe() {
       <LongText
         content={aboutMeContent}
         id="about"
-        bottomPadding="pb-8 sm:pb-16 md:pb-32 lg:pb-48"
-        topPadding="pt-8 sm:pt-16 md:pt-24 lg:pt-32"
+        bottomPadding="pb-8 sm:pb-16 md:pb-24 lg:pb-48"
+        topPadding="pt-8 sm:pt-16 md:pt-24"
         classes="scroll-mt-12"
       />
       <MyPractice
