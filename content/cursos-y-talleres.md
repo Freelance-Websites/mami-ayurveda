@@ -11,7 +11,7 @@ alimentationCourse:
       />Es un taller online asincrónico para hacer a tu ritmo. Disponible todo
       el año, te podés sumar cuando quieras.
     price: 10
-    courseUrl: https://classroom.google.com/ayurveda-alimentacion-familiar
+    courseUrl: https://classroom.google.com/c/MjI3NTUwMDg5NjA0?cjc=pwnyv53
     features:
       - featureText: Podrás acceder a videos, material de lectura y un foro de consultas
           durante 3 meses.
