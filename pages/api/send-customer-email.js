@@ -55,6 +55,14 @@ export default async function handler(req, res) {
           <div style="margin: 30px 0; padding: 20px; background-color: #eff6ff; border-radius: 8px; border-left: 4px solid #2563eb;">
             <h2 style="color: #1e40af; margin-top: 0;">🎓 Accedé a tu Curso</h2>
             <p style="color: #1e40af; margin-bottom: 15px;">Tu curso ya está disponible. Hacé click en el botón de abajo para acceder:</p>
+            
+            <!-- Gmail requirement warning -->
+            <div style="margin: 15px 0; padding: 12px; background-color: #fef3c7; border-radius: 6px; border-left: 3px solid #f59e0b;">
+              <p style="color: #92400e; margin: 0; font-size: 14px;">
+                <strong>⚠️ Importante:</strong> Necesitás tener una cuenta de Gmail válida para acceder a Google Classroom.
+              </p>
+            </div>
+            
             <a href="${fullDeliveryUrl}" 
                style="display: inline-block; padding: 12px 24px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
               Acceder al Curso
