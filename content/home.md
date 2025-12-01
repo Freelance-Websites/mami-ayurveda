@@ -1,6 +1,9 @@
 ---
 pageTitle: Home
 metaTitle: Mami Ayurveda | Medicina Familiar integrativa | Pediatría Ayurvedica
+metaDescription: Acompañamiento ayurvédico para mamás y familias. Rutinas,
+  recetas, equilibrio emocional y consultas personalizadas. Bienvenida a tu
+  espacio de bienestar.
 heroDesktopImage: /images/uploads/bg/homepage-desktop.jpg
 heroMobileImage: /images/uploads/bg/homepage-mobile.jpg
 heroTitle: Hola!
