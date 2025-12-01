@@ -1,5 +1,8 @@
 ---
 pageTitle: Turnos
+metaTitle: Turnos de consulta | Acompañamiento ayurvédico personalizado
+metaDescription: Reservá tu turno para una consulta ayurvédica personalizada.
+  Acompañamiento cálido, integral y adaptado a tu momento vital y tu maternidad.
 heroDesktopImage: /images/uploads/bg/turnos-desktop.jpg
 heroTitle: Turnos
 contactTitle: Reservar un turno
