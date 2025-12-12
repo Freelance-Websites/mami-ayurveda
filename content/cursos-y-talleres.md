@@ -1,5 +1,6 @@
 ---
 pageTitle: Cursos y talleres
+metaTitle: Cursos y talleres
 heroDesktopImage: /images/uploads/bg/courses-desktop.jpg
 heroTitle: Cursos y talleres
 alimentationCourse:
