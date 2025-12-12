@@ -756,7 +756,7 @@ collections:
                  max: 2
                  fields:
                    - { label: "Texto", name: "ctaText", widget: "string", hint: "El texto del botón" }
-                   - { label: "Archivo", name: "ctaUrl", widget: "file", default: "/images/uploads/courses/taller-alimentacion-ayur-informacion.pdf", hint: "El PDF al que linkea el botón" }
+                   - { label: "Archivo", name: "ctaUrl", widget: "file", default: "/images/uploads/courses/taller-alimentacion-ayur-informacion.pdf", hint: "El PDF al que linkea el botón", required: false }
           - {
               label: "Título contacto",
               name: "contactTitle",
