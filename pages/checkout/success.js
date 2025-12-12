@@ -60,6 +60,7 @@ export default function CheckoutSuccess() {
       formData.append('product', product.title.replace(/<[^>]*>/g, ''));
       formData.append('category', product.category);
       formData.append('price', product.price || '');
+      formData.append('form', 'Confirmación de compra');
       
       // Submit to Google Sheets
       await fetch('https://script.google.com/macros/s/AKfycbxkNhcKafcfD4k5o7U8R40llpqOFf8lUPKWdKqSaruyJvaeX5Ecau7YKene-FrQs6Re/exec', {

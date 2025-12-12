@@ -106,7 +106,7 @@ export default function Contact({ title, text, subtitle, ctas, type }) {
   );
 }
 
-export function ContactForm({ title }) {
+export function ContactForm({ title, name = "Contacto" }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleSubmit = async (event) => {
@@ -119,6 +119,9 @@ export function ContactForm({ title }) {
     // Add source field based on current page
     const currentPath = window.location.pathname;
     formData.append('source', currentPath);
+    
+    // Add form name to payload
+    formData.append('form', name);
     
     // Submit the form and assume success since you mentioned it's working
     try {
@@ -207,7 +210,7 @@ export function ContactForm({ title }) {
   );
 }
 
-export function AppointmentsForm() {
+export function AppointmentsForm({ name = "Turnos" }) {
   const [activeType, setActiveType] = useState('online');
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -221,6 +224,9 @@ export function AppointmentsForm() {
     // Add source field based on current page
     const currentPath = window.location.pathname;
     formData.append('source', currentPath);
+    
+    // Add form name to payload
+    formData.append('form', name);
     
     // Submit the form and assume success since you mentioned it's working
     try {

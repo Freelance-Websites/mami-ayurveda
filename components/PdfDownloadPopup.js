@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
-export default function PdfDownloadPopup({ isOpen, onClose, pdfUrl, title = "Descarga el PDF" }) {
+export default function PdfDownloadPopup({ isOpen, onClose, pdfUrl, title = "Descarga el PDF", name = "Test Doshas" }) {
   const [formData, setFormData] = useState({
     name: '',
     email: ''
@@ -31,6 +31,9 @@ export default function PdfDownloadPopup({ isOpen, onClose, pdfUrl, title = "Des
       // Add source field based on current page
       const currentPath = window.location.pathname;
       formSubmission.append('source', currentPath);
+      
+      // Add form name to payload
+      formSubmission.append('form', name);
 
       // Submit the form and assume success since you mentioned it's working
       fetch('https://script.google.com/macros/s/AKfycbxkNhcKafcfD4k5o7U8R40llpqOFf8lUPKWdKqSaruyJvaeX5Ecau7YKene-FrQs6Re/exec', {

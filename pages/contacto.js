@@ -47,7 +47,7 @@ export default function Contact() {
   )
 }
 
-export function Form({ title }) {
+export function Form({ title, name = "Contacto" }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleSubmit = async (event) => {
@@ -58,6 +58,9 @@ export function Form({ title }) {
     // Add source field based on current page
     const currentPath = window.location.pathname;
     formData.append('source', currentPath);
+    
+    // Add form name to payload
+    formData.append('form', name);
     
     setIsSubmitting(true);
     

@@ -94,7 +94,7 @@ export default function Hero({ title, text, cta, desktopImage, mobileImage, show
   );
 }
 
-export function Form() {
+export function Form({ name = "Turnos home" }) {
   const [activeType, setActiveType] = useState('online');
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -106,6 +106,9 @@ export function Form() {
     // Add source field based on current page
     const currentPath = window.location.pathname;
     formData.append('source', currentPath);
+    
+    // Add form name to payload
+    formData.append('form', name);
     
     setIsSubmitting(true);
     
