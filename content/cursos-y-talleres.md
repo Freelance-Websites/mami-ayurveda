@@ -10,7 +10,7 @@ alimentationCourse:
       conceptos claves de nutrición moderna para aplicar en tu día a día.<br
       />Es un taller online asincrónico para hacer a tu ritmo. Disponible todo
       el año, te podés sumar cuando quieras.
-    price: 10
+    price: 35000
     courseUrl: https://classroom.google.com/c/MjI3NTUwMDg5NjA0?cjc=pwnyv53
     features:
       - featureText: Podrás acceder a videos, material de lectura y un foro de consultas
