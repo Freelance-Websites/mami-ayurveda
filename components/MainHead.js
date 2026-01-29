@@ -14,7 +14,6 @@ export default function MainHead({ title, metaTitle, metaDescription }) {
 
         {/* SEO Meta Tags */}
         {metaDescription && <meta name="description" content={metaDescription} />}
-        <meta name="google-site-verification" content="G07AsobRPJgQvIZZ1Iv-U9hdorJVZuaok7teXPL--rc" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={formattedTitle} />

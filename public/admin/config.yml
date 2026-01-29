@@ -934,3 +934,89 @@ collections:
               hint: "El texto para el botón del encabezado",
               required: false,
             }
+      # Blog (página de listado)
+      - label: "Blog (página de listado)"
+        name: "blog-index"
+        file: "content/blog.md"
+        fields:
+          - {
+              label: "Título de la página",
+              name: "pageTitle",
+              widget: "string",
+              required: false,
+              hint: "Para el título de la pestaña",
+            }
+          - {
+              label: "Título SEO",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+              hint: "Título para SEO/redes sociales",
+            }
+          - {
+              label: "Descripción SEO",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+              hint: "Descripción para SEO (máximo 160 caracteres recomendado)",
+            }
+          - {
+              label: "Imagen escritorio encabezado",
+              name: "heroDesktopImage",
+              widget: "image",
+              hint: "Imagen del encabezado en escritorio",
+            }
+          - {
+              label: "Imagen mobile encabezado",
+              name: "heroMobileImage",
+              widget: "image",
+              required: false,
+              hint: "Imagen del encabezado en móvil",
+            }
+          - {
+              label: "Título encabezado",
+              name: "heroTitle",
+              widget: "string",
+              hint: "El título del encabezado",
+            }
+          - {
+              label: "Texto encabezado",
+              name: "heroDescription",
+              widget: "text",
+              required: false,
+              hint: "Podés usar HTML en este campo",
+            }
+          - {
+              label: "Título contacto",
+              name: "contactTitle",
+              widget: "string",
+              hint: "El título de la sección de contacto",
+            }
+          - {
+              label: "Título formulario de contacto",
+              name: "contactFormTitle",
+              widget: "string",
+              hint: "El título del formulario de contacto",
+              required: false,
+            }
+          - label: "Botones contacto"
+            name: "contactCTAs"
+            widget: "list"
+            allow_add: true
+            max: 2
+            hint: "Máximo 2"
+            fields:
+              - { label: "Texto del botón", name: "text", widget: "string" }
+              - { label: "Link del botón", name: "link", widget: "string" }
+  # Entradas del blog: crear y editar posts en content/blog/*.md (aparece como "Blog" en el menú del CMS)
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Descripción", name: "description", widget: "text", required: false, hint: "Para SEO y vista previa (máximo 160 caracteres)" }
+      - { label: "Imagen destacada", name: "image", widget: "image", required: false }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }

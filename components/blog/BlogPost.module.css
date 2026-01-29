@@ -1,0 +1,77 @@
+/* Blog post body: headings, quote, image, text styles, links, lists */
+
+.body h1 {
+  @apply font-serif text-slate-800 text-3xl md:text-4xl font-semibold mt-8 mb-4 pb-2 border-b border-slate-200;
+}
+
+.body h2 {
+  @apply font-serif text-slate-800 text-2xl md:text-3xl font-semibold mt-8 mb-3;
+}
+
+.body h3 {
+  @apply font-serif text-slate-700 text-xl md:text-2xl font-medium mt-6 mb-2;
+}
+
+.body h4 {
+  @apply font-serif text-slate-700 text-lg md:text-xl font-medium mt-5 mb-2;
+}
+
+.body h5 {
+  @apply font-serif text-slate-700 text-base md:text-lg font-medium mt-4 mb-2;
+}
+
+.body h6 {
+  @apply font-serif text-slate-600 text-sm md:text-base font-medium mt-3 mb-1;
+}
+
+.body p {
+  @apply font-serif text-slate-700 text-xl md:text-2xl mb-4 leading-relaxed;
+}
+
+.body blockquote {
+  @apply border-l-4 border-orange-400 pl-4 md:pl-6 py-2 my-6 italic font-serif text-slate-600 text-lg md:text-xl bg-slate-50 rounded-r;
+}
+
+.body img {
+  @apply w-full rounded-xl my-6 object-cover max-h-[28rem];
+}
+
+.body strong {
+  @apply font-semibold text-slate-800;
+}
+
+.body em {
+  @apply italic;
+}
+
+.body u {
+  @apply underline decoration-orange-400 decoration-2 underline-offset-2;
+}
+
+.body a {
+  @apply text-orange-500 hover:text-orange-600 underline underline-offset-2 transition-colors;
+}
+
+.body ul {
+  @apply list-disc list-outside pl-6 md:pl-8 my-4 space-y-2 font-serif text-slate-700 text-lg md:text-xl;
+}
+
+.body ol {
+  @apply list-decimal list-outside pl-6 md:pl-8 my-4 space-y-2 font-serif text-slate-700 text-lg md:text-xl;
+}
+
+.body li {
+  @apply pl-1;
+}
+
+.body li p {
+  @apply mb-1;
+}
+
+.body hr {
+  @apply my-8 border-slate-200;
+}
+
+.body :first-child {
+  @apply mt-0;
+}
