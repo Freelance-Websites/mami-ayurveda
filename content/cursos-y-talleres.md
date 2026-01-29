@@ -1,6 +1,9 @@
 ---
 pageTitle: Cursos y talleres
-metaTitle: Cursos y talleres
+metaTitle: Cursos y talleres de Ayurveda | Bienestar para mamás y familias
+metaDescription: "Aprendé Ayurveda con cursos y talleres prácticos:
+  alimentación, rutinas, autocuidado y crianza consciente. Formaciones diseñadas
+  para mamás reales."
 heroDesktopImage: /images/uploads/bg/courses-desktop.jpg
 heroTitle: Cursos y talleres
 alimentationCourse:
